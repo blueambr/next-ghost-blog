@@ -1,25 +1,24 @@
 {
-  "name": "@vgerasimovich/create-next-app-extended",
-  "version": "1.2.3",
-  "description": "An extended version of Create Next App with linters, styles adjustment, pre-commit and more",
+  "name": "@vgerasimovich/next-ghost-blog",
+  "version": "1.0.0",
+  "description": "A progressive blog, made with Next.js and Ghost",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vgerasimovich/create-next-app-extended.git"
+    "url": "https://github.com/vgerasimovich/next-ghost-blog.git"
   },
   "keywords": [
-    "create-next-app",
-    "create-next-app-extended",
-    "cna",
-    "cnax",
-    "react",
     "next",
     "nextjs",
-    "builder",
-    "task runner"
+    "ghost",
+    "blog"
   ],
-  "author": "Vlad Gerasimovich <vlad.gerasimovich.micro@outlook.com>",
+  "author": {
+    "name": "Vlad Gerasimovich",
+    "email": "vlad.gerasimovich.micro@outlook.com",
+    "url": "https://vladg.dev"
+  },
   "license": "MIT",
-  "bugs": "https://github.com/vgerasimovich/create-next-app-extended/issues",
+  "bugs": "https://github.com/vgerasimovich/next-ghost-blog/issues",
   "dependencies": {
     "next": "10.0.5",
     "normalize.css": "^8.0.1",
