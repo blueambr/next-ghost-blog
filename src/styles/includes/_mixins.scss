@@ -66,9 +66,13 @@
   }
 }
 
+@mixin trans($dur: 0.3) {
+  transition: all $dur + s;
+}
+
 // Fonts
-@function rem($px) {
-  @return $px / 16px + 0rem;
+@function rem($val) {
+  @return $val / 16 + 0rem;
 }
 
 @mixin font($style: te-400) {

@@ -1,0 +1,23 @@
+{
+  "logo": {
+    "href": "/",
+    "text": "Next Ghost Blog"
+  },
+  "nav": [
+    {
+      "key": "navLinkFeatured",
+      "href": "/featured",
+      "text": "Featured"
+    },
+    {
+      "key": "navLinkRecent",
+      "href": "/recent",
+      "text": "Recent"
+    },
+    {
+      "key": "navLinkAbout",
+      "href": "/about",
+      "text": "About"
+    }
+  ]
+}

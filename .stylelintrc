@@ -160,6 +160,12 @@
       {
         "type": "at-rule",
         "name": "include",
+        "parameter": "trans",
+        "hasBlock": false
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
         "hasBlock": false
       },
       "declarations",
@@ -183,7 +189,7 @@
       {
         "type": "at-rule",
         "name": "include",
-        "parameter": "haf",
+        "parameter": "hf",
         "hasBlock": true
       },
       {

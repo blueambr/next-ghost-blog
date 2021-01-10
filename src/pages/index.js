@@ -1,9 +1,13 @@
-import Layout from 'templates/layout';
+import Layout from '@/layout';
+import Header from '@/sections/Header';
+import data from 'data.json';
 
-export default function Home() {
-  return (
-    <>
-      <Layout />
-    </>
-  );
-}
+const Home = () => (
+  <>
+    <Layout>
+      <Header data={data} />
+    </Layout>
+  </>
+);
+
+export default Home;

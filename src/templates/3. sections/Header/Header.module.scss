@@ -1,0 +1,32 @@
+@import 'src/styles/includes/includes';
+
+.header {
+  padding: rem(15) 0;
+  background-color: $color-bg;
+
+  @include laptop {
+    padding: rem(25) 0;
+  }
+}
+
+.wrapper {
+  @include laptop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 rem(-15);
+  }
+}
+
+.logo {
+  @include laptop {
+    padding: 0 rem(15);
+  }
+}
+
+.nav {
+  @include mobile {
+    margin-top: rem(20);
+  }
+}

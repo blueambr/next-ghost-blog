@@ -1,6 +1,12 @@
 {
   "compilerOptions": {
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "@/layout": ["templates/0. layout/index"],
+      "@/elements/*": ["templates/1. elements/*"],
+      "@/components/*": ["templates/2. components/*"],
+      "@/sections/*": ["templates/3. sections/*"]
+    }
   },
   "include": ["src"]
 }
