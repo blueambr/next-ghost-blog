@@ -1,0 +1,56 @@
+# Dependencies
+node_modules
+npm-debug.log*
+.pnp
+.pnp.js
+
+# OS or Editor folders
+*.sublime-grunt.cache
+*.sublime-project
+*.sublime-workspace
+.idea
+.vscode
+._*
+.cache
+.DS_Store
+.project
+.settings
+.tmproj
+Thumbs.db
+
+# Server settings
+.htaccess
+
+# Misc
+.CVS
+.git
+.hg
+.svn
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.pnp
+.pnp.js
+bower_components
+
+# Next.js
+.next
+out
+
+# Numerous always-ignore extensions & files
+*.bak
+*.diff
+*.err
+*.exe
+*.log
+*.orig
+*.rej
+*.sass-cache
+*.swo
+*.swp
+*.vi
+*~
+
+# Testing
+coverage
