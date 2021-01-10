@@ -1,11 +1,13 @@
-$font_name: 'Open Sans';
-$font-path_name: 'OpenSans';
+// Fonts
+$font-text-name: 'Lato';
+$font-text-path-name: $font-text-name;
+$font-title-name: 'Comfortaa';
+$font-title-path-name: $font-title-name;
 
-// Static colors
-$white: #ffffff;
-
-// Project colors
-$main_color: #212121;
-$accent_color: #0070f3;
-$bg_color: $white;
-$border_color: #eaeaea;
+// Colors
+$color-primary: #008fff;
+$color-bg: #000000;
+$color-light: #ffffff;
+$color-title: #e2f1f8;
+$color-text: #cfd8dc;
+$color-gradient: linear-gradient(90deg, #360033 0%, #0b8793 100%);

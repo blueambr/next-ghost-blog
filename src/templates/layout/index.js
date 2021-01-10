@@ -1,17 +1,17 @@
 import Head from 'next/head';
 
 const Layout = ({ children }) => (
-    <>
-      <Head>
-        <meta charSet="utf-8" />
-        <link rel="shortcut icon" href="favicon/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0070f3" />
-        <link rel="manifest" href="favicon/manifest.json" />
-        <title>Create Next App eXtended</title>
-      </Head>
-      {children}
-    </>
-  );
+  <>
+    <Head>
+      <meta charset="utf-8" />
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="referrer" content="no-referrer-when-downgrade" />
+      <meta name="theme-color" content="#008fff" />
+      <title>Next Ghost Blog</title>
+    </Head>
+    {children}
+  </>
+);
 
 export default Layout;

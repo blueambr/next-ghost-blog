@@ -1,6 +1,6 @@
 // Local variables
-$container_width: 1550px;
-$container_padding_sides: 10px;
+$container_width: 890px;
+$container_padding_sides: 15px;
 //--
 
 * {
@@ -8,25 +8,25 @@ $container_padding_sides: 10px;
 }
 
 ::selection {
-  color: $bg_color;
-  background-color: $accent_color;
+  color: $color-bg;
+  background-color: $color-primary;
 }
 
 html {
   // Stick the footer with a dynamic height to the bottom of a page
-  height: 100%;
+  min-height: 100%;
   //-
   font-size: 16px;
 }
 
 html,
 body {
-  @include font(400);
+  @include font(te-400);
   width: 100%;
 }
 
 body {
-  height: 100%;
+  min-height: 100%;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
 }
@@ -36,7 +36,7 @@ body {
   // Stick the footer with a dynamic height to the bottom of a page
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
   //-
 }
 
@@ -149,12 +149,3 @@ footer {
   margin-top: auto;
   //-
 }
-
-// Fix IE11 display:flex on the body
-header,
-main,
-section,
-footer {
-  flex-shrink: 0;
-}
-//-
