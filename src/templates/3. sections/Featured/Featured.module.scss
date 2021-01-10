@@ -1,0 +1,17 @@
+@import 'src/styles/includes/includes';
+
+.featured {
+  padding: rem(30) 0;
+  background-image: $color-gradient;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 rem(-10) rem(-20);
+}
+
+.col {
+  width: 50%;
+  padding: 0 rem(10) rem(20);
+}

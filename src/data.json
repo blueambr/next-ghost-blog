@@ -19,5 +19,43 @@
       "href": "/about",
       "text": "About"
     }
+  ],
+  "featured": [
+    {
+      "key": "featuredPostSecretSanta",
+      "title": "Managing Secret Santa with style",
+      "image": {
+        "src": "/images/posts/secret-santa.png",
+        "alt": "Secret Santa is looking at you"
+      },
+      "tags": [
+        {
+          "href": "#",
+          "text": "Vanilla JS"
+        },
+        {
+          "href": "#",
+          "text": "Node.js"
+        }
+      ]
+    },
+    {
+      "key": "featuredPostSecretSanta2",
+      "title": "Managing Secret Santa with style",
+      "image": {
+        "src": "/images/posts/secret-santa.png",
+        "alt": "Secret Santa is looking at you"
+      },
+      "tags": [
+        {
+          "href": "#",
+          "text": "Vanilla JS"
+        },
+        {
+          "href": "#",
+          "text": "Node.js"
+        }
+      ]
+    }
   ]
 }
