@@ -4,13 +4,13 @@ import styles from './Featured.module.scss';
 const Featured = ({ data }) => (
   <section className={styles.featured}>
     <div className="container">
-      <div className={styles.wrapper}>
+      <ul className={styles.row}>
         {data.map((post) => (
-          <div className={styles.col}>
+          <li className={styles.col}>
             <FeaturedPost data={post} key={post.key} />
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   </section>
 );

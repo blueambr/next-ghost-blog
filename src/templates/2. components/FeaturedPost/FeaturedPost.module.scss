@@ -1,18 +1,73 @@
 @import 'src/styles/includes/includes';
 
 .cover {
+  position: relative;
   overflow: hidden;
   border-radius: 5px;
+}
+
+.pic {
+  display: block;
+
+  @include hf {
+    img {
+      transform: scale(1.1);
+    }
+  }
 
   img {
+    @include trans(1);
     object-fit: cover;
+  }
+}
+
+.tags {
+  position: absolute;
+  top: rem(10);
+  right: rem(10);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 rem(-5) rem(-10);
+}
+
+.tag {
+  padding: 0 rem(5) rem(10);
+
+  &__link {
+    @include trans;
+    display: block;
+    padding: rem(5) rem(10);
+    border-radius: 25px;
+    font-size: rem(14);
+    color: $color-title;
+    background-color: $color-primary;
+
+    @include hf {
+      color: $color-primary;
+      background-color: $color-bg;
+    }
   }
 }
 
 .title {
   @include font(ti-700);
-  padding: rem(15) rem(20);
   text-align: center;
-  font-size: rem(26);
-  color: $color-title;
+  font-size: rem(22);
+
+  @include laptop {
+    font-size: rem(26);
+  }
+
+  &__link {
+    @include trans;
+    display: block;
+    padding: rem(15) rem(20);
+    color: $color-title;
+
+    @include hf {
+      color: $color-primary;
+    }
+  }
 }

@@ -22,37 +22,39 @@
   ],
   "featured": [
     {
-      "key": "featuredPostSecretSanta",
-      "title": "Managing Secret Santa with style",
+      "key": "featuredPostSecretSanta2019",
+      "href": "#secret-santa-2019",
+      "title": "Managing 2019 Secret Santa with style",
       "image": {
         "src": "/images/posts/secret-santa.png",
         "alt": "Secret Santa is looking at you"
       },
       "tags": [
         {
-          "href": "#",
-          "text": "Vanilla JS"
+          "href": "#js",
+          "text": "JS"
         },
         {
-          "href": "#",
+          "href": "#nodejs",
           "text": "Node.js"
         }
       ]
     },
     {
-      "key": "featuredPostSecretSanta2",
-      "title": "Managing Secret Santa with style",
+      "key": "featuredPostSecretSanta2020",
+      "href": "#secret-santa-2020",
+      "title": "Managing 2020 Secret Santa with style",
       "image": {
         "src": "/images/posts/secret-santa.png",
         "alt": "Secret Santa is looking at you"
       },
       "tags": [
         {
-          "href": "#",
-          "text": "Vanilla JS"
+          "href": "#js",
+          "text": "JS"
         },
         {
-          "href": "#",
+          "href": "#nodejs",
           "text": "Node.js"
         }
       ]

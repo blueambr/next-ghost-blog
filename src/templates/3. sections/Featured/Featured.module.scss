@@ -3,15 +3,23 @@
 .featured {
   padding: rem(30) 0;
   background-image: $color-gradient;
+
+  @include laptop {
+    padding: rem(50) 0;
+  }
 }
 
-.wrapper {
+.row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 rem(-10) rem(-20);
 }
 
 .col {
-  width: 50%;
+  width: 100%;
   padding: 0 rem(10) rem(20);
+
+  @include tablet {
+    width: 50%;
+  }
 }
