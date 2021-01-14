@@ -1,0 +1,35 @@
+@import 'src/styles/includes/includes';
+
+.link {
+  @include trans;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 rem(-10);
+  color: $color-title;
+
+  @include hf {
+    color: $color-primary;
+  }
+}
+
+.title {
+  @include font(ti-400);
+  padding: 0 rem(10);
+  font-size: rem(20);
+
+  @include laptop {
+    font-size: rem(24);
+  }
+}
+
+.view-all {
+  @include font(ti-400);
+  padding: 0 rem(10);
+  font-size: rem(16);
+  flex-shrink: 0;
+
+  @include laptop {
+    font-size: rem(20);
+  }
+}

@@ -1,12 +1,16 @@
 @import 'src/styles/includes/includes';
 
 .featured {
-  padding: rem(30) 0;
+  padding: rem(20) 0;
   background-image: $color-gradient;
 
   @include laptop {
-    padding: rem(50) 0;
+    padding: rem(30) 0;
   }
+}
+
+.page-link {
+  margin-bottom: rem(20);
 }
 
 .row {
