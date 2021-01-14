@@ -51,11 +51,11 @@
   },
   "scripts": {
     "build": "next build",
-    "dev": "next",
+    "dev": "next dev",
     "export": "next export",
     "lint": "lint-staged",
     "open": "next start",
-    "start": "next"
+    "start": "next dev"
   },
   "browserslist": [
     "> 0.5%",
