@@ -6,8 +6,8 @@ const Featured = ({ data }) => (
     <div className="container">
       <ul className={styles.row}>
         {data.map((post) => (
-          <li className={styles.col}>
-            <FeaturedPost data={post} key={post.key} />
+          <li className={styles.col} key={post.key}>
+            <FeaturedPost data={post} />
           </li>
         ))}
       </ul>

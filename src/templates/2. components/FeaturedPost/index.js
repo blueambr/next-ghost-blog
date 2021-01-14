@@ -21,7 +21,7 @@ const FeaturedPost = ({ data }) => {
         </Link>
         <ul className={styles.tags}>
           {tags.map((tag) => (
-            <li className={styles.tag}>
+            <li className={styles.tag} key={tag.key}>
               <Link href={tag.href}>
                 <a className={styles.tag__link}>{tag.text}</a>
               </Link>
