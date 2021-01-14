@@ -52,6 +52,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
+    "export": "next export",
     "lint": "lint-staged",
     "open": "next start",
     "start": "next"
