@@ -1,73 +1,8 @@
 {
-  "logo": {
-    "href": "/",
-    "text": "Next Ghost Blog"
-  },
-  "nav": [
-    {
-      "key": "navLinkFeatured",
-      "href": "/featured",
-      "text": "Featured"
-    },
-    {
-      "key": "navLinkRecent",
-      "href": "/recent",
-      "text": "Recent"
-    },
-    {
-      "key": "navLinkAbout",
-      "href": "/about",
-      "text": "About"
-    }
-  ],
   "featured": {
     "pageLink": {
       "href": "/featured",
       "text": "Featured"
-    },
-    "posts": [
-      {
-        "key": "featuredPostSecretSanta2019",
-        "href": "/secret-santa-2019",
-        "title": "Managing 2019 Secret Santa with style",
-        "image": {
-          "src": "/images/posts/secret-santa.png",
-          "alt": "Secret Santa is looking at you"
-        },
-        "tags": [
-          {
-            "key": "tagJS",
-            "href": "/js",
-            "text": "JS"
-          },
-          {
-            "key": "tagNodeJs",
-            "href": "/nodejs",
-            "text": "Node.js"
-          }
-        ]
-      },
-      {
-        "key": "featuredPostSecretSanta2020",
-        "href": "/secret-santa-2020",
-        "title": "Managing 2020 Secret Santa with style",
-        "image": {
-          "src": "/images/posts/secret-santa.png",
-          "alt": "Secret Santa is looking at you"
-        },
-        "tags": [
-          {
-            "key": "tagJS",
-            "href": "/js",
-            "text": "JS"
-          },
-          {
-            "key": "tagNodeJs",
-            "href": "/nodejs",
-            "text": "Node.js"
-          }
-        ]
-      }
-    ]
+    }
   }
 }

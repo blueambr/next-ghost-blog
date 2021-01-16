@@ -9,6 +9,11 @@ const api = new GhostContentAPI({
   version: 'v3',
 });
 
+export const getSettings = async () =>
+  api.settings.browse().catch((err) => {
+    console.error(err);
+  });
+
 export const getFeaturedPosts = async () =>
   api.posts
     .browse({

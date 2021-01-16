@@ -23,7 +23,16 @@ const FeaturedPost = ({ data }) => {
           {tags.map((tag) => (
             <li className={styles.tag} key={tag.id}>
               <Link href={`/${tag.slug}`}>
-                <a className={styles.tag__link}>{tag.name}</a>
+                {tag.accent_color ? (
+                  <a
+                    className={styles.tag__link}
+                    style={{ backgroundColor: tag.accent_color }}
+                  >
+                    {tag.name}
+                  </a>
+                ) : (
+                  <a className={styles.tag__link}>{tag.name}</a>
+                )}
               </Link>
             </li>
           ))}

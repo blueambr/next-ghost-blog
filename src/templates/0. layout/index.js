@@ -1,6 +1,7 @@
 import Head from 'next/head';
+import Header from '@/sections/Header';
 
-const Layout = ({ children }) => (
+const Layout = ({ data, children }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
@@ -11,6 +12,7 @@ const Layout = ({ children }) => (
       <title>Next Ghost Blog</title>
     </Head>
 
+    <Header data={data} />
     {children}
   </>
 );
