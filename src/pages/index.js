@@ -1,4 +1,4 @@
-import { getSettings, getFeaturedPosts, getAllPosts } from 'lib/posts';
+import { getSettings, getFeaturedPosts, getAllPosts } from 'lib/content';
 import Layout from '@/layout';
 import Featured from '@/sections/Featured';
 import data from 'data.json';
