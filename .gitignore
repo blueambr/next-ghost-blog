@@ -54,3 +54,6 @@ out
 
 # Testing
 coverage
+
+# Private
+private.json

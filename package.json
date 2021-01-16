@@ -20,6 +20,7 @@
   "license": "MIT",
   "bugs": "https://github.com/vgerasimovich/next-ghost-blog/issues",
   "dependencies": {
+    "@tryghost/content-api": "^1.4.13",
     "next": "10.0.5",
     "normalize.css": "^8.0.1",
     "react": "17.0.1",
@@ -52,10 +53,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "export": "next export",
     "lint": "lint-staged",
-    "open": "next start",
-    "start": "next dev"
+    "start": "next start"
   },
   "browserslist": [
     "> 0.5%",

@@ -4,6 +4,7 @@
   "rules": {
     "camelcase": 0,
     "func-names": 0,
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
     "no-plusplus": 0,
     "no-undef": 0,
     "no-underscore-dangle": 0,
