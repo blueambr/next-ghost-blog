@@ -89,7 +89,7 @@ const Layout = ({ data, children }) => {
       </Head>
 
       <Header data={data} />
-      {children}
+      <main>{children}</main>
     </>
   );
 };

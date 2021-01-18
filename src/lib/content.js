@@ -29,7 +29,9 @@ export const getFeaturedPosts = async () =>
 export const getAllPosts = async () =>
   api.posts
     .browse({
+      include: 'tags',
       limit: 'all',
+      order: 'published_at DESC',
     })
     .catch((err) => {
       console.error(err);

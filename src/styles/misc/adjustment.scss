@@ -21,13 +21,15 @@ html {
 
 html,
 body {
-  @include font(te-400);
   width: 100%;
 }
 
 body {
+  @include font(te-400);
   min-height: 100%;
   line-height: 1.42;
+  color: $color-text;
+  background-color: $color-bg;
   -webkit-font-smoothing: antialiased;
 }
 

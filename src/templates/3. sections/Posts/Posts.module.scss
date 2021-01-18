@@ -1,8 +1,12 @@
 @import 'src/styles/includes/includes';
 
-.featured {
+.posts {
   padding: rem(30) 0;
-  background-image: $color-gradient;
+  background-image: $color-bg;
+
+  @include laptop {
+    padding: rem(40) 0;
+  }
 }
 
 .page-link {
@@ -12,14 +16,10 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 rem(-10) rem(-20);
+  margin-bottom: rem(-40);
 }
 
 .col {
   width: 100%;
-  padding: 0 rem(10) rem(20);
-
-  @include tablet {
-    width: 50%;
-  }
+  margin-bottom: rem(40);
 }

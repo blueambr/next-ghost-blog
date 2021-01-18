@@ -1,16 +1,16 @@
 import { getSettings, getFeaturedPosts, getAllPosts } from 'lib/content';
 import Layout from '@/layout';
 import Featured from '@/sections/Featured';
-import data from 'data.json';
+import Posts from '@/sections/Posts';
 
 const Home = ({ settings, featuredPosts, posts }) => {
-  const { featured } = data;
-  const { pageLink } = featured;
+  const recentPageLink = { href: '/recent', text: 'Recent' };
 
   return (
     <>
       <Layout data={settings}>
-        <Featured pageLink={pageLink} posts={featuredPosts} />
+        <Featured posts={featuredPosts} />
+        <Posts pageLink={recentPageLink} posts={posts} />
       </Layout>
     </>
   );

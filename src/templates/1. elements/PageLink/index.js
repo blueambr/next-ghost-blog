@@ -8,8 +8,14 @@ const PageLink = ({ data }) => {
     <h3 className={styles['page-link']}>
       <Link href={href}>
         <a className={styles.link}>
-          <span className={styles.title}>{text}</span>
-          <span className={styles['view-all']}>{viewAllText}</span>
+          <div className={styles.title}>
+            <div className={styles.layer} />
+            <span>{text}</span>
+          </div>
+          <div className={styles['view-all']}>
+            <div className={styles.layer} />
+            <span>{viewAllText}</span>
+          </div>
         </a>
       </Link>
     </h3>

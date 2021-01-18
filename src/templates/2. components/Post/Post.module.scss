@@ -1,0 +1,107 @@
+@import 'src/styles/includes/includes';
+
+.wrapper {
+  @include tablet {
+    display: flex;
+    margin: 0 rem(-10);
+  }
+}
+
+.cover {
+  width: 100%;
+
+  @include mobile-sm {
+    margin-bottom: rem(20);
+  }
+
+  @include tablet {
+    width: 35%;
+    padding: 0 rem(10);
+  }
+
+  @include laptop {
+    width: 30%;
+  }
+}
+
+.content {
+  width: 100%;
+
+  @include tablet {
+    width: 65%;
+    padding: 0 rem(10);
+  }
+
+  @include laptop {
+    width: 70%;
+  }
+}
+
+.pic {
+  display: block;
+  overflow: hidden;
+  border-radius: 5px;
+
+  @include hf {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  img {
+    @include trans(1);
+    object-fit: cover;
+  }
+}
+
+.title {
+  @include font(ti-700);
+  font-size: rem(28);
+
+  @include laptop {
+    font-size: rem(32);
+  }
+
+  &__link {
+    @include trans;
+    display: block;
+    color: $color-title;
+
+    @include hf {
+      color: $color-primary;
+    }
+  }
+}
+
+.additional {
+  margin-top: rem(20);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 rem(-10);
+  margin-bottom: rem(10);
+}
+
+.tag {
+  padding: 0 rem(10) rem(10);
+
+  &__link {
+    @include trans;
+    display: block;
+    font-size: rem(22);
+    color: $color-primary;
+
+    @include hf {
+      color: $color-title;
+    }
+  }
+}
+
+.excerpt {
+  @include font;
+  font-size: rem(18);
+  color: $color-text;
+}

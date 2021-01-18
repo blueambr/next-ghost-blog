@@ -2,12 +2,12 @@
 
 .cover {
   position: relative;
-  overflow: hidden;
-  border-radius: 5px;
 }
 
 .pic {
   display: block;
+  overflow: hidden;
+  border-radius: 5px;
 
   @include hf {
     img {

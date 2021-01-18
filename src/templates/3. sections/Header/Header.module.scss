@@ -1,7 +1,7 @@
 @import 'src/styles/includes/includes';
 
 .header {
-  padding: rem(15) 0;
+  padding: rem(25) 0 rem(15);
   background-color: $color-bg;
 
   @include laptop {
