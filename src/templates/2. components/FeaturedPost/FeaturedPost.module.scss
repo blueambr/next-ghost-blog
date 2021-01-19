@@ -2,6 +2,11 @@
 
 .cover {
   position: relative;
+
+  @include mobile-sm {
+    max-width: rem(400);
+    margin: 0 auto;
+  }
 }
 
 .pic {
@@ -11,12 +16,12 @@
 
   @include hf {
     img {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
 
   img {
-    @include trans(1);
+    @include trans;
     object-fit: cover;
   }
 }
@@ -45,7 +50,7 @@
     background-color: $color-primary;
 
     @include hf {
-      color: $color-primary;
+      color: $color-title;
       background-color: $color-bg;
     }
   }
@@ -61,13 +66,19 @@
   }
 
   &__link {
-    @include trans;
     display: block;
     padding: rem(15) rem(20);
-    color: $color-title;
+
+    span {
+      @include trans;
+      color: $color-title;
+    }
 
     @include hf {
-      color: $color-primary;
+      span {
+        color: $color-bg;
+        background-color: $color-primary;
+      }
     }
   }
 }

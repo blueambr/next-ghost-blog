@@ -14,7 +14,7 @@ const FeaturedPost = ({ data }) => {
               src={feature_image}
               alt="Alt"
               width={100}
-              height={50}
+              height={60}
               layout="responsive"
             />
           </a>
@@ -40,7 +40,9 @@ const FeaturedPost = ({ data }) => {
       </div>
       <h2 className={styles.title}>
         <Link href={`/${slug}`}>
-          <a className={styles.title__link}>{title}</a>
+          <a className={styles.title__link}>
+            <span>{title}</span>
+          </a>
         </Link>
       </h2>
     </article>

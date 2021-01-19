@@ -2,16 +2,22 @@
 
 .link {
   @include font(ti-700);
-  @include trans;
   display: block;
   font-size: rem(32);
-  color: $color-title;
+
+  span {
+    @include trans;
+    color: $color-title;
+  }
 
   @include mobile {
     text-align: center;
   }
 
   @include hf {
-    color: $color-primary;
+    span {
+      color: $color-bg;
+      background-color: $color-primary;
+    }
   }
 }

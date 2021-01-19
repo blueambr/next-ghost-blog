@@ -12,17 +12,23 @@
 
 .link {
   @include font(ti-400);
-  @include trans;
   display: block;
   padding: rem(10);
   font-size: rem(20);
-  color: $color-title;
 
   @include laptop {
     padding: rem(15);
   }
 
+  span {
+    @include trans;
+    color: $color-title;
+  }
+
   @include hf {
-    color: $color-primary;
+    span {
+      color: $color-bg;
+      background-color: $color-primary;
+    }
   }
 }

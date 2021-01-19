@@ -11,6 +11,7 @@
   width: 100%;
 
   @include mobile-sm {
+    max-width: rem(400);
     margin-bottom: rem(20);
   }
 
@@ -44,12 +45,12 @@
 
   @include hf {
     img {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
 
   img {
-    @include trans(1);
+    @include trans;
     object-fit: cover;
   }
 }
@@ -65,10 +66,17 @@
   &__link {
     @include trans;
     display: block;
-    color: $color-title;
+
+    span {
+      @include trans;
+      color: $color-title;
+    }
 
     @include hf {
-      color: $color-primary;
+      span {
+        color: $color-bg;
+        background-color: $color-primary;
+      }
     }
   }
 }
@@ -95,7 +103,8 @@
     color: $color-primary;
 
     @include hf {
-      color: $color-title;
+      color: $color-bg;
+      background-color: $color-primary;
     }
   }
 }

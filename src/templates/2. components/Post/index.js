@@ -24,7 +24,9 @@ const Post = ({ data }) => {
         <div className={styles.content}>
           <h2 className={styles.title}>
             <Link href={`/${slug}`}>
-              <a className={styles.title__link}>{title}</a>
+              <a className={styles.title__link}>
+                <span>{title}</span>
+              </a>
             </Link>
           </h2>
           <div className={styles.additional}>
