@@ -57,10 +57,10 @@
 
 .title {
   @include font(ti-700);
-  font-size: rem(28);
+  font-size: rem(26);
 
   @include laptop {
-    font-size: rem(32);
+    font-size: rem(30);
   }
 
   &__link {
@@ -82,7 +82,7 @@
 }
 
 .additional {
-  margin-top: rem(20);
+  margin-top: rem(10);
 }
 
 .tags {
@@ -99,8 +99,12 @@
   &__link {
     @include trans;
     display: block;
-    font-size: rem(22);
+    font-size: rem(16);
     color: $color-primary;
+
+    @include laptop {
+      font-size: rem(22);
+    }
 
     @include hf {
       color: $color-bg;
@@ -111,6 +115,10 @@
 
 .excerpt {
   @include font;
-  font-size: rem(18);
+  font-size: rem(16);
   color: $color-text;
+
+  @include laptop {
+    font-size: rem(18);
+  }
 }

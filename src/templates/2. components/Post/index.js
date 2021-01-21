@@ -10,10 +10,10 @@ const Post = ({ data }) => {
       <div className={styles.wrapper}>
         <div className={styles.cover}>
           <Link href={`/${slug}`}>
-            <a className={styles.pic}>
+            <a className={styles.pic} aria-label="Go to the post">
               <Image
                 src={feature_image}
-                alt="Alt"
+                alt="Representative image"
                 width={100}
                 height={70}
                 layout="responsive"
