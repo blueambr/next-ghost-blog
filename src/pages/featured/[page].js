@@ -2,7 +2,7 @@ import { getSettings, getFeaturedPostsPage } from 'lib/content';
 import Layout from '@/layout';
 import Posts from '@/sections/Posts';
 
-const Post = ({ settings, posts }) => (
+const FeaturedPage = ({ settings, posts }) => (
   <Layout data={settings}>
     <Posts posts={posts} />
   </Layout>
@@ -36,4 +36,4 @@ export const getStaticProps = async (context) => {
   };
 };
 
-export default Post;
+export default FeaturedPage;

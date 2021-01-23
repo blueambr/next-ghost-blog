@@ -2,7 +2,7 @@ import { getSettings, getAllTags, getTagPage } from 'lib/content';
 import Layout from '@/layout';
 import Posts from '@/sections/Posts';
 
-const Post = ({ settings, posts }) => (
+const TagPage = ({ settings, posts }) => (
   <Layout data={settings}>
     <Posts posts={posts} />
   </Layout>
@@ -46,4 +46,4 @@ export const getStaticProps = async (context) => {
   };
 };
 
-export default Post;
+export default TagPage;

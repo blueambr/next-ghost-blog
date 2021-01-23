@@ -1,7 +1,7 @@
 import { getSettings, getAllPosts, getSinglePost } from 'lib/content';
 import Layout from '@/layout';
 
-const Post = ({ settings, post }) => {
+const PostPage = ({ settings, post }) => {
   const { title, html } = post;
 
   return (
@@ -34,4 +34,4 @@ export const getStaticProps = async (context) => {
   };
 };
 
-export default Post;
+export default PostPage;
