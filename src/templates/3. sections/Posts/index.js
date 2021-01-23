@@ -14,7 +14,7 @@ const Posts = ({ pageLink, posts }) => (
         <div className={styles.content}>
           <ul className={styles.row}>
             {posts.map((post) => (
-              <li className={styles.col} key={post.uuid}>
+              <li className={styles.col} key={post.id}>
                 <Post data={post} />
               </li>
             ))}

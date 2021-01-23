@@ -9,7 +9,7 @@ const Post = ({ data }) => {
     <article className={styles.article}>
       <div className={styles.wrapper}>
         <div className={styles.cover}>
-          <Link href={`/${slug}`}>
+          <Link href={`/post/${slug}`}>
             <a className={styles.pic} aria-label="Go to the post">
               <Image
                 src={feature_image}
@@ -23,7 +23,7 @@ const Post = ({ data }) => {
         </div>
         <div className={styles.content}>
           <h2 className={styles.title}>
-            <Link href={`/${slug}`}>
+            <Link href={`/post/${slug}`}>
               <a className={styles.title__link}>
                 <span>{title}</span>
               </a>
@@ -33,7 +33,7 @@ const Post = ({ data }) => {
             <ul className={styles.tags}>
               {tags.map((tag) => (
                 <li className={styles.tag} key={tag.id}>
-                  <Link href={`/${tag.slug}`}>
+                  <Link href={`/tag/${tag.slug}`}>
                     {tag.accent_color ? (
                       <a
                         className={styles.tag__link}

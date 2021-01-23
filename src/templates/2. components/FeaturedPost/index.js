@@ -8,7 +8,7 @@ const FeaturedPost = ({ data }) => {
   return (
     <article className={styles.article}>
       <div className={styles.cover}>
-        <Link href={`/${slug}`}>
+        <Link href={`/post/${slug}`}>
           <a className={styles.pic} aria-label="Go to the post">
             <Image
               src={feature_image}
@@ -22,7 +22,7 @@ const FeaturedPost = ({ data }) => {
         <ul className={styles.tags}>
           {tags.map((tag) => (
             <li className={styles.tag} key={tag.id}>
-              <Link href={`/${tag.slug}`}>
+              <Link href={`/tag/${tag.slug}`}>
                 {tag.accent_color ? (
                   <a
                     className={styles.tag__link}
@@ -39,7 +39,7 @@ const FeaturedPost = ({ data }) => {
         </ul>
       </div>
       <h2 className={styles.title}>
-        <Link href={`/${slug}`}>
+        <Link href={`/post/${slug}`}>
           <a className={styles.title__link}>
             <span>{title}</span>
           </a>
