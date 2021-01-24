@@ -50,7 +50,7 @@
     background-color: $color-primary;
 
     @include hf {
-      color: $color-title;
+      color: $color-title !important;
       background-color: $color-bg;
     }
   }

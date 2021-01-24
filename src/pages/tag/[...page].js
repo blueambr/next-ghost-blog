@@ -2,11 +2,17 @@ import { getSettings, getAllTags, getTagPage } from 'lib/content';
 import Layout from '@/layout';
 import Posts from '@/sections/Posts';
 
-const TagPage = ({ settings, posts }) => (
+const TagPage = ({ settings, posts, pagination, slug }) => (
   <Layout data={settings}>
-    <Posts posts={posts} />
+    <Posts
+      posts={posts}
+      pagination={pagination}
+      paginationRoot={`tag/${slug}`}
+    />
   </Layout>
 );
+
+export default TagPage;
 
 export const getStaticPaths = async () => {
   const tags = await getAllTags();
@@ -41,9 +47,12 @@ export const getStaticProps = async (context) => {
   const settings = await getSettings();
   const posts = await getTagPage(page[0], page[1] || 1);
 
+  const { meta } = posts;
+  const { pagination } = meta;
+
+  const slug = page[0];
+
   return {
-    props: { settings, posts },
+    props: { settings, posts, pagination, slug },
   };
 };
-
-export default TagPage;

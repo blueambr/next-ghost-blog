@@ -2,11 +2,13 @@ import { getSettings, getAllPostsPage } from 'lib/content';
 import Layout from '@/layout';
 import Posts from '@/sections/Posts';
 
-const RecentPage = ({ settings, posts }) => (
+const RecentPage = ({ settings, posts, pagination }) => (
   <Layout data={settings}>
-    <Posts posts={posts} />
+    <Posts posts={posts} pagination={pagination} paginationRoot="recent" />
   </Layout>
 );
+
+export default RecentPage;
 
 export const getStaticPaths = async () => {
   const posts = await getAllPostsPage();
@@ -15,10 +17,10 @@ export const getStaticPaths = async () => {
   const { pagination } = meta;
   const { pages } = pagination;
 
-  const paths = [];
+  const paths = [{ params: { page: [] } }];
 
   for (let i = 0; i < pages; i++) {
-    paths.push({ params: { page: (i + 1).toString() } });
+    paths.push({ params: { page: [(i + 1).toString()] } });
   }
 
   return { paths, fallback: false };
@@ -29,11 +31,12 @@ export const getStaticProps = async (context) => {
   const { page } = params;
 
   const settings = await getSettings();
-  const posts = await getAllPostsPage(page);
+  const posts = await getAllPostsPage(page ? page[0] : 1);
+
+  const { meta } = posts;
+  const { pagination } = meta;
 
   return {
-    props: { settings, posts },
+    props: { settings, posts, pagination },
   };
 };
-
-export default RecentPage;

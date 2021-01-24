@@ -12,6 +12,8 @@ const PostPage = ({ settings, post }) => {
   );
 };
 
+export default PostPage;
+
 export const getStaticPaths = async () => {
   const posts = await getAllPosts();
 
@@ -33,5 +35,3 @@ export const getStaticProps = async (context) => {
     props: { settings, post },
   };
 };
-
-export default PostPage;

@@ -107,7 +107,7 @@
     }
 
     @include hf {
-      color: $color-bg;
+      color: $color-bg !important;
       background-color: $color-primary;
     }
   }

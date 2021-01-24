@@ -1,0 +1,54 @@
+@import 'src/styles/includes/includes';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(40);
+}
+
+.list {
+  display: flex;
+}
+
+.link {
+  @include trans;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(40);
+  height: rem(40);
+  border-radius: 50%;
+
+  @include hf {
+    background-color: $color-primary;
+
+    .icon {
+      color: $color-bg;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+
+    @include hf {
+      background-color: transparent;
+
+      .icon {
+        color: $color-title;
+      }
+    }
+  }
+}
+
+.icon {
+  @include trans;
+  width: rem(20);
+  color: $color-title;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

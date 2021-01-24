@@ -1,8 +1,9 @@
 import PageLink from '@/elements/PageLink';
 import Post from '@/components/Post';
+import Pagination from '@/components/Pagination';
 import styles from './Posts.module.scss';
 
-const Posts = ({ pageLink, posts }) => (
+const Posts = ({ pageLink, posts, pagination, paginationRoot }) => (
   <section className={styles.posts}>
     <div className="container">
       <div className={styles.wrapper}>
@@ -20,6 +21,11 @@ const Posts = ({ pageLink, posts }) => (
             ))}
           </ul>
         </div>
+        {pagination && (
+          <div className={styles.pagination}>
+            <Pagination data={pagination} root={paginationRoot} />
+          </div>
+        )}
       </div>
     </div>
   </section>

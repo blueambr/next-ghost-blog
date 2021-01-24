@@ -36,14 +36,13 @@ export const getAllPostsPage = async (page) =>
       console.error(err);
     });
 
-export const getFeaturedPostsPage = async (limit, page) =>
+export const getFeaturedPosts = async (limit) =>
   api.posts
     .browse({
       filter: 'featured:true',
       include: 'tags',
       limit: limit || 2,
       order: 'published_at DESC',
-      page: page || 1,
     })
     .catch((err) => {
       console.error(err);

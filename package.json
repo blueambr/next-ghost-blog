@@ -20,6 +20,11 @@
   "license": "MIT",
   "bugs": "https://github.com/vgerasimovich/next-ghost-blog/issues",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@tryghost/content-api": "^1.4.13",
     "next": "10.0.5",
     "normalize.css": "^8.0.1",
