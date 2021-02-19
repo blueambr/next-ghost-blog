@@ -51,7 +51,7 @@
 
     @include hf {
       color: $color-title !important;
-      background-color: $color-bg;
+      background-color: $color-bg !important;
     }
   }
 }
