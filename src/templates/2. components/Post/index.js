@@ -8,19 +8,21 @@ const Post = ({ data }) => {
   return (
     <article className={styles.article}>
       <div className={styles.wrapper}>
-        <div className={styles.cover}>
-          <Link href={`/post/${slug}`}>
-            <a className={styles.pic} aria-label="Go to the post">
-              <Image
-                src={feature_image}
-                alt="Representative image"
-                width={100}
-                height={70}
-                layout="responsive"
-              />
-            </a>
-          </Link>
-        </div>
+        {feature_image && (
+          <div className={styles.cover}>
+            <Link href={`/post/${slug}`}>
+              <a className={styles.pic} aria-label="Go to the post">
+                <Image
+                  src={feature_image}
+                  alt="Representative image"
+                  width={100}
+                  height={70}
+                  layout="responsive"
+                />
+              </a>
+            </Link>
+          </div>
+        )}
         <div className={styles.content}>
           <h2 className={styles.title}>
             <Link href={`/post/${slug}`}>

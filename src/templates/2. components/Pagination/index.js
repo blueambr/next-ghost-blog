@@ -44,27 +44,31 @@ const Pagination = ({ data, root }) => {
     const pagesAvailableArray = [];
 
     if (pagesArrayLength > 5) {
-      if (
-        page !== pagesArrayLength - 4 &&
-        page !== pagesArrayLength - 3 &&
-        page !== pagesArrayLength - 2 &&
-        page !== pagesArrayLength - 1 &&
-        page !== pagesArrayLength
-      ) {
-        pagesAvailableArray.push(pagesArray[page - 1]);
-        pagesAvailableArray.push(pagesArray[page]);
-        pagesAvailableArray.push('...');
+      if (page === pagesArray[0] || page === pagesArray[1]) {
+        pagesAvailableArray.push(pagesArray[0]);
+        pagesAvailableArray.push(pagesArray[1]);
+        pagesAvailableArray.push(pagesArray[2]);
+        pagesAvailableArray.push(pagesArray[3]);
+        pagesAvailableArray.push(pagesArray[4]);
+
+        return pagesItems(pagesAvailableArray);
+      }
+
+      if (page === pagesArrayLength - 1 || page === pagesArrayLength) {
+        pagesAvailableArray.push(pagesArray[pagesArrayLength - 5]);
+        pagesAvailableArray.push(pagesArray[pagesArrayLength - 4]);
+        pagesAvailableArray.push(pagesArray[pagesArrayLength - 3]);
         pagesAvailableArray.push(pagesArray[pagesArrayLength - 2]);
         pagesAvailableArray.push(pagesArray[pagesArrayLength - 1]);
 
         return pagesItems(pagesAvailableArray);
       }
 
-      pagesAvailableArray.push(pagesArray[pagesArrayLength - 5]);
-      pagesAvailableArray.push(pagesArray[pagesArrayLength - 4]);
-      pagesAvailableArray.push(pagesArray[pagesArrayLength - 3]);
-      pagesAvailableArray.push(pagesArray[pagesArrayLength - 2]);
-      pagesAvailableArray.push(pagesArray[pagesArrayLength - 1]);
+      pagesAvailableArray.push(pagesArray[page - 3]);
+      pagesAvailableArray.push(pagesArray[page - 2]);
+      pagesAvailableArray.push(pagesArray[page - 1]);
+      pagesAvailableArray.push(pagesArray[page]);
+      pagesAvailableArray.push(pagesArray[page + 1]);
 
       return pagesItems(pagesAvailableArray);
     }
