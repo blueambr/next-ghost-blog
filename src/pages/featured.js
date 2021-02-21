@@ -2,11 +2,17 @@ import { getSettings, getFeaturedPosts } from 'lib/content';
 import Layout from '@/layout';
 import Posts from '@/sections/Posts';
 
-const FeaturedPage = ({ settings, posts }) => (
-  <Layout data={settings}>
-    <Posts posts={posts} />
-  </Layout>
-);
+const FeaturedPage = ({ settings, posts }) => {
+  const meta = {
+    pageTitle: 'Featured posts',
+  };
+
+  return (
+    <Layout data={settings} meta={meta}>
+      <Posts posts={posts} />
+    </Layout>
+  );
+};
 
 export default FeaturedPage;
 

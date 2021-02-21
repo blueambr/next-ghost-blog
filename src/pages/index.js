@@ -4,10 +4,13 @@ import Featured from '@/sections/Featured';
 import Posts from '@/sections/Posts';
 
 const Home = ({ settings, posts, featuredPosts, pagination }) => {
+  const meta = {
+    pageTitle: '«Welcome!»',
+  };
   const recentPageLink = { href: '/recent', text: 'Recent' };
 
   return (
-    <Layout data={settings}>
+    <Layout data={settings} meta={meta}>
       <Featured posts={featuredPosts} />
       <Posts
         pageLink={recentPageLink}

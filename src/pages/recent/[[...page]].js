@@ -2,11 +2,19 @@ import { getSettings, getAllPostsPage } from 'lib/content';
 import Layout from '@/layout';
 import Posts from '@/sections/Posts';
 
-const RecentPage = ({ settings, posts, pagination }) => (
-  <Layout data={settings}>
-    <Posts posts={posts} pagination={pagination} paginationRoot="recent" />
-  </Layout>
-);
+const RecentPage = ({ settings, posts, pagination }) => {
+  const { page } = pagination;
+  const meta = {
+    pageTitle: 'Recent posts',
+    pageTitleAfter: page !== 1 ? `• Page ${page}` : null,
+  };
+
+  return (
+    <Layout data={settings} meta={meta}>
+      <Posts posts={posts} pagination={pagination} paginationRoot="recent" />
+    </Layout>
+  );
+};
 
 export default RecentPage;
 

@@ -67,6 +67,16 @@ export const getAllTags = async () =>
       console.error(err);
     });
 
+export const readTag = async (slug) =>
+  api.tags
+    .read({
+      slug,
+      fields: 'name',
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
 export const getTagPage = async (slug, page) =>
   api.posts
     .browse({

@@ -1,8 +1,11 @@
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Header from '@/sections/Header';
 
-const Layout = ({ data, children }) => {
-  const { title, description, meta_title, meta_description } = data;
+const Layout = ({ data, meta, children }) => {
+  const { asPath } = useRouter();
+  const { title, description } = data;
+  const { pageTitle, pageTitleAfter, ogType, ogDescription, ogImage } = meta;
 
   return (
     <>
@@ -11,27 +14,46 @@ const Layout = ({ data, children }) => {
         <meta name="HandheldFriendly" content="True" />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{title}</title>
-        <meta name="description" content={meta_description || description} />
-        <link rel="canonical" href="https://vladg.dev/" />
+        <title>
+          {!pageTitleAfter
+            ? `${pageTitle} from ${title}`
+            : `${pageTitle} from ${title} ${pageTitleAfter}`}
+        </title>
+        {asPath === '/' && <meta name="description" content={description} />}
+        <link rel="canonical" href={`https://vladg.dev${asPath}`} />
 
         {/* og */}
         <meta property="og:site_name" content={title} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={meta_title || title} />
+        <meta property="og:type" content={ogType || 'website'} />
+        <meta
+          property="og:title"
+          content={
+            !pageTitleAfter
+              ? `${pageTitle} from ${title}`
+              : `${pageTitle} from ${title} ${pageTitleAfter}`
+          }
+        />
         <meta
           property="og:description"
-          content={meta_description || description}
+          content={ogDescription || description}
         />
-        <meta property="og:url" content="https://vladg.dev/" />
+        <meta property="og:url" content={`https://vladg.dev${asPath}`} />
+        {ogImage && <meta property="og:image" content={ogImage} />}
         {/* * */}
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={title} />
+        <meta
+          name="twitter:title"
+          content={
+            !pageTitleAfter
+              ? `${pageTitle} from ${title}`
+              : `${pageTitle} from ${title} ${pageTitleAfter}`
+          }
+        />
         <meta
           name="twitter:description"
-          content={meta_description || description}
+          content={ogDescription || description}
         />
         <meta name="twitter:url" content="https://vladg.dev/" />
         {/* * */}
@@ -81,7 +103,7 @@ const Layout = ({ data, children }) => {
                 '@type': 'WebPage',
                 '@id': 'https://vladg.dev/',
               },
-              description: `${meta_description || description}`,
+              description: `${description}`,
             }),
           }}
         />
