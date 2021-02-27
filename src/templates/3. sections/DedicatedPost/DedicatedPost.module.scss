@@ -1,0 +1,83 @@
+@import 'src/styles/includes/includes';
+
+.post {
+  padding: rem(30) 0;
+  background-color: $color-bg;
+
+  @include laptop {
+    padding: rem(40) 0;
+  }
+}
+
+.head {
+  margin-bottom: rem(50);
+}
+
+.title {
+  @include font(ti-700);
+  font-size: rem(36);
+  color: $color-title;
+
+  @include laptop {
+    font-size: rem(52);
+  }
+}
+
+.additional {
+  margin-top: rem(5);
+}
+
+.excerpt {
+  @include font;
+  font-size: rem(20);
+  color: $color-text;
+
+  @include laptop {
+    font-size: rem(24);
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: rem(35);
+
+  &__author {
+    @include font(ti-500);
+    font-size: rem(18);
+    color: $color-title;
+
+    @include laptop {
+      font-size: rem(20);
+    }
+
+    &-img {
+      border-radius: 5px;
+    }
+  }
+
+  &__text {
+    margin-left: rem(20);
+  }
+
+  &__numbers {
+    @include font;
+    display: flex;
+    font-size: rem(16);
+    color: $color-text;
+
+    @include laptop {
+      font-size: rem(18);
+    }
+  }
+}
+
+.divider {
+  margin: 0 rem(5);
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+  height: rem(500);
+}

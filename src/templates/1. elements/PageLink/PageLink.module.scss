@@ -29,20 +29,20 @@
 .title {
   @include font(ti-400);
   padding: 0 rem(10);
-  font-size: rem(20);
+  font-size: rem(24);
 
   @include laptop {
-    font-size: rem(24);
+    font-size: rem(28);
   }
 }
 
 .view-all {
   @include font(ti-400);
   padding: 0 rem(10);
-  font-size: rem(16);
+  font-size: rem(20);
   flex-shrink: 0;
 
   @include laptop {
-    font-size: rem(20);
+    font-size: rem(24);
   }
 }

@@ -1,16 +1,16 @@
 import { getSettings, getAllPosts, getSinglePost } from 'lib/content';
 import Layout from '@/layout';
+import DedicatedPost from '@/sections/DedicatedPost';
 
 const PostPage = ({ settings, post }) => {
   const {
     authors,
     excerpt,
     feature_image,
-    html,
     published_at,
-    updated_at,
     tags,
     title,
+    updated_at,
   } = post;
   const meta = {
     authors,
@@ -25,8 +25,7 @@ const PostPage = ({ settings, post }) => {
 
   return (
     <Layout data={settings} meta={meta}>
-      <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <DedicatedPost data={post} />
     </Layout>
   );
 };

@@ -57,10 +57,10 @@
 
 .title {
   @include font(ti-700);
-  font-size: rem(26);
+  font-size: rem(30);
 
   @include laptop {
-    font-size: rem(30);
+    font-size: rem(34);
   }
 
   &__link {
@@ -85,40 +85,12 @@
   margin-top: rem(10);
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0 rem(-10);
-  margin-bottom: rem(10);
-}
-
-.tag {
-  padding: 0 rem(10) rem(10);
-
-  &__link {
-    @include trans;
-    display: block;
-    font-size: rem(16);
-    color: $color-primary;
-
-    @include laptop {
-      font-size: rem(22);
-    }
-
-    @include hf {
-      color: $color-bg !important;
-      background-color: $color-primary;
-    }
-  }
-}
-
 .excerpt {
   @include font;
-  font-size: rem(16);
+  font-size: rem(20);
   color: $color-text;
 
   @include laptop {
-    font-size: rem(18);
+    font-size: rem(24);
   }
 }

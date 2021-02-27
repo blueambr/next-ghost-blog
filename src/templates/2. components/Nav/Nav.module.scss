@@ -17,6 +17,10 @@
   font-size: rem(20);
 
   @include laptop {
+    font-size: rem(24);
+  }
+
+  @include laptop {
     padding: rem(15);
   }
 

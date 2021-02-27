@@ -59,10 +59,10 @@
 .title {
   @include font(ti-700);
   text-align: center;
-  font-size: rem(24);
+  font-size: rem(30);
 
   @include laptop {
-    font-size: rem(28);
+    font-size: rem(34);
   }
 
   &__link {

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Tags from '@/elements/Tags';
 import styles from './Post.module.scss';
 
 const Post = ({ data }) => {
@@ -32,24 +33,7 @@ const Post = ({ data }) => {
             </Link>
           </h2>
           <div className={styles.additional}>
-            <ul className={styles.tags}>
-              {tags.map((tag) => (
-                <li className={styles.tag} key={tag.id}>
-                  <Link href={`/tag/${tag.slug}`}>
-                    {tag.accent_color ? (
-                      <a
-                        className={styles.tag__link}
-                        style={{ color: tag.accent_color }}
-                      >
-                        {tag.name}
-                      </a>
-                    ) : (
-                      <a className={styles.tag__link}>{tag.name}</a>
-                    )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <Tags tags={tags} />
             <div className={styles.excerpt}>
               <p>{excerpt}</p>
             </div>

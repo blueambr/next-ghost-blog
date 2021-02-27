@@ -1,0 +1,29 @@
+@import 'src/styles/includes/includes';
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 rem(-10);
+  margin-bottom: rem(10);
+}
+
+.tag {
+  padding: 0 rem(10) rem(10);
+
+  &__link {
+    @include trans;
+    display: block;
+    font-size: rem(20);
+    color: $color-primary;
+
+    @include laptop {
+      font-size: rem(24);
+    }
+
+    @include hf {
+      color: $color-bg !important;
+      background-color: $color-primary;
+    }
+  }
+}

@@ -3,7 +3,11 @@
 .link {
   @include font(ti-700);
   display: block;
-  font-size: rem(32);
+  font-size: rem(30);
+
+  @include laptop {
+    font-size: rem(34);
+  }
 
   span {
     @include trans;
