@@ -52,6 +52,7 @@ export const getSinglePost = async (postSlug) =>
   api.posts
     .read({
       slug: postSlug,
+      include: 'tags,authors',
     })
     .catch((err) => {
       console.error(err);

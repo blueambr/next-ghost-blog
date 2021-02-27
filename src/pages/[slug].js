@@ -2,13 +2,28 @@ import { getSettings, getAllPosts, getSinglePost } from 'lib/content';
 import Layout from '@/layout';
 
 const PostPage = ({ settings, post }) => {
-  const { title, html, excerpt, feature_image } = post;
+  const {
+    authors,
+    excerpt,
+    feature_image,
+    html,
+    published_at,
+    updated_at,
+    tags,
+    title,
+  } = post;
   const meta = {
-    pageTitle: `«${title}»`,
+    authors,
     ogType: 'article',
     ogDescription: excerpt,
     ogImage: feature_image,
+    pageTitle: title,
+    publishedAt: published_at,
+    updatedAt: updated_at,
+    tags,
   };
+
+  console.log(post);
 
   return (
     <Layout data={settings} meta={meta}>

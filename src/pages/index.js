@@ -5,7 +5,7 @@ import Posts from '@/sections/Posts';
 
 const Home = ({ settings, posts, featuredPosts, pagination }) => {
   const meta = {
-    pageTitle: '«Welcome!»',
+    pageTitle: 'Welcome!',
   };
   const recentPageLink = { href: '/recent', text: 'Recent' };
 

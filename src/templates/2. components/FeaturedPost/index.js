@@ -8,7 +8,7 @@ const FeaturedPost = ({ data }) => {
   return (
     <article className={styles.article}>
       <div className={styles.cover}>
-        <Link href={`/post/${slug}`}>
+        <Link href={`/${slug}`}>
           <a className={styles.pic} aria-label="Go to the post">
             <Image
               src={feature_image}
@@ -39,7 +39,7 @@ const FeaturedPost = ({ data }) => {
         </ul>
       </div>
       <h2 className={styles.title}>
-        <Link href={`/post/${slug}`}>
+        <Link href={`/${slug}`}>
           <a className={styles.title__link}>
             <span>{title}</span>
           </a>

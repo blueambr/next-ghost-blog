@@ -7,6 +7,7 @@ const RecentPage = ({ settings, posts, pagination }) => {
   const meta = {
     pageTitle: 'Recent posts',
     pageTitleAfter: page !== 1 ? `• Page ${page}` : null,
+    schemaType: 'Series',
   };
 
   return (

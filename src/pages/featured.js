@@ -5,6 +5,7 @@ import Posts from '@/sections/Posts';
 const FeaturedPage = ({ settings, posts }) => {
   const meta = {
     pageTitle: 'Featured posts',
+    schemaType: 'Series',
   };
 
   return (

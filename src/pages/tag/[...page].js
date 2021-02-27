@@ -4,7 +4,8 @@ import Posts from '@/sections/Posts';
 
 const TagPage = ({ settings, posts, pagination, slug, name }) => {
   const meta = {
-    pageTitle: `«${name}»`,
+    pageTitle: name,
+    schemaType: 'Series',
   };
 
   return (
