@@ -23,8 +23,6 @@ const PostPage = ({ settings, post }) => {
     tags,
   };
 
-  console.log(post);
-
   return (
     <Layout data={settings} meta={meta}>
       <h1>{title}</h1>
