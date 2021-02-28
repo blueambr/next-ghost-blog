@@ -79,5 +79,13 @@
 .cover {
   position: relative;
   width: 100%;
-  height: rem(500);
+  height: rem(300);
+
+  @include laptop {
+    height: rem(500);
+  }
+
+  @include desktop {
+    height: rem(700);
+  }
 }

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { format } from 'date-fns';
 import Tags from '@/elements/Tags';
+import RichText from '@/components/RichText';
 import styles from './DedicatedPost.module.scss';
 
 const DedicatedPost = ({ data }) => {
@@ -8,6 +9,7 @@ const DedicatedPost = ({ data }) => {
     authors,
     excerpt,
     feature_image,
+    html,
     reading_time,
     tags,
     title,
@@ -62,6 +64,11 @@ const DedicatedPost = ({ data }) => {
           layout="fill"
           objectFit="cover"
         />
+      </div>
+      <div className={styles['rich-text']}>
+        <div className="container">
+          <RichText data={html} />
+        </div>
       </div>
     </section>
   );
