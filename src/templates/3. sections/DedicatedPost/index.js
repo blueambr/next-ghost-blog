@@ -6,17 +6,15 @@ import styles from './DedicatedPost.module.scss';
 
 const DedicatedPost = ({ data }) => {
   const {
-    authors,
     excerpt,
     feature_image,
     html,
+    primary_author,
     reading_time,
     tags,
     title,
     updated_at,
   } = data;
-
-  const author = authors[0];
 
   return (
     <section className={styles.post}>
@@ -34,14 +32,14 @@ const DedicatedPost = ({ data }) => {
               <div className={styles['info__author-avatar']}>
                 <Image
                   className={styles['info__author-img']}
-                  src={author.profile_image}
-                  alt={`${author.name}'s avatar`}
+                  src={primary_author.profile_image}
+                  alt={`${primary_author.name}'s avatar`}
                   width={50}
                   height={50}
                 />
               </div>
               <div className={styles.info__text}>
-                <div className={styles.info__author}>{author.name}</div>
+                <div className={styles.info__author}>{primary_author.name}</div>
                 <div className={styles.info__numbers}>
                   <span className={styles.info__updated}>
                     {format(new Date(updated_at), 'MMM do, yyyy')}

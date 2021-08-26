@@ -27,6 +27,7 @@
     "@fortawesome/react-fontawesome": "^0.1.15",
     "@tryghost/content-api": "^1.5.12",
     "date-fns": "^2.23.0",
+    "lazysizes": "^5.3.2",
     "next": "^11.1.0",
     "normalize.css": "^8.0.1",
     "react": "17.0.2",
