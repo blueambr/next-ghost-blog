@@ -71,6 +71,10 @@
 
     span {
       @include trans;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
       color: $color-title;
     }
 
