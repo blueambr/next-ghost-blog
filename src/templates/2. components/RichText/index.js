@@ -10,14 +10,18 @@ const RichText = ({ data }) => {
     if (rte.current) {
       /**
        * Lazyload RTE images.
+       * Make the lazyload canvas the same width and height as the resulted image.
        * Unfortunately, I couldn't find a way to use next/image for them.
        */
+      const { offsetWidth } = rte.current;
       const images = [...rte.current.getElementsByTagName('img')];
 
       images.map((img) => {
-        const { src } = img;
+        const { src, width, height } = img;
 
         img.setAttribute('src', 'null');
+        img.setAttribute('width', offsetWidth);
+        img.setAttribute('height', offsetWidth * (width / height));
         img.setAttribute('data-src', src);
         img.classList.add('lazyload');
       });
