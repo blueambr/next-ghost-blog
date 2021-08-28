@@ -84,7 +84,10 @@ const Pagination = ({ data, root }) => {
         <li className={styles.item}>
           {page !== pagesArray[0] ? (
             <Link href={`/${root}/${pagesArray[0]}`}>
-              <a className={`${styles.link} ${styles.clickable}`}>
+              <a
+                className={`${styles.link} ${styles.clickable}`}
+                title="Go to the first page"
+              >
                 <div className={styles.icon}>
                   <FontAwesomeIcon icon={faFastBackward} />
                 </div>
@@ -101,7 +104,10 @@ const Pagination = ({ data, root }) => {
         <li className={styles.item}>
           {prev ? (
             <Link href={`/${root}/${prev}`}>
-              <a className={`${styles.link} ${styles.clickable}`}>
+              <a
+                className={`${styles.link} ${styles.clickable}`}
+                title="Go to the previous page"
+              >
                 <div className={`${styles.icon} ${styles.small}`}>
                   <FontAwesomeIcon icon={faStepBackward} />
                 </div>
@@ -119,7 +125,10 @@ const Pagination = ({ data, root }) => {
         <li className={styles.item}>
           {next ? (
             <Link href={`/${root}/${next}`}>
-              <a className={`${styles.link} ${styles.clickable}`}>
+              <a
+                className={`${styles.link} ${styles.clickable}`}
+                title="Go to the next page"
+              >
                 <div className={`${styles.icon} ${styles.small}`}>
                   <FontAwesomeIcon icon={faStepForward} />
                 </div>
@@ -136,7 +145,10 @@ const Pagination = ({ data, root }) => {
         <li className={styles.item}>
           {page !== pagesArrayLength ? (
             <Link href={`/${root}/${pagesArrayLength}`}>
-              <a className={`${styles.link} ${styles.clickable}`}>
+              <a
+                className={`${styles.link} ${styles.clickable}`}
+                title="Go to the last page"
+              >
                 <div className={styles.icon}>
                   <FontAwesomeIcon icon={faFastForward} />
                 </div>
