@@ -1,7 +1,7 @@
 @import 'src/styles/includes/includes';
 
 .post {
-  padding: rem(30) 0;
+  padding: rem(10) 0 rem(30);
   background-color: $color-bg;
 
   @include laptop {
@@ -24,7 +24,11 @@
 }
 
 .additional {
-  margin-top: rem(5);
+  margin-top: rem(15);
+
+  @include laptop {
+    margin-top: rem(5);
+  }
 }
 
 .excerpt {
@@ -80,6 +84,7 @@
   position: relative;
   width: 100%;
   height: rem(300);
+  margin-bottom: rem(50);
 
   @include laptop {
     height: rem(500);

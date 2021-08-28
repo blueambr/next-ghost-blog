@@ -7,6 +7,11 @@ $font-title-path-name: $font-title-name;
 // Colors
 $color-primary: #008fff;
 $color-bg: #000000;
+$color-bg--light: #2c2c2c;
 $color-title: #e2f1f8;
 $color-text: #cfd8dc;
+$color-text--dark: #9ea7aa;
 $color-gradient: linear-gradient(90deg, #360033 0%, #0b8793 100%);
+
+// Misc
+$shadow-primary: 5px 5px 10px 0px rgba($color-primary, 0.6);

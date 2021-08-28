@@ -69,6 +69,13 @@
     display: block;
     padding: rem(15) rem(20);
 
+    @include hf {
+      span {
+        color: $color-bg;
+        background-color: $color-primary;
+      }
+    }
+
     span {
       @include trans;
       display: -webkit-box;
@@ -76,13 +83,6 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       color: $color-title;
-    }
-
-    @include hf {
-      span {
-        color: $color-bg;
-        background-color: $color-primary;
-      }
     }
   }
 }

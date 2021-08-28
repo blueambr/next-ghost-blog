@@ -9,11 +9,6 @@
     font-size: rem(34);
   }
 
-  span {
-    @include trans;
-    color: $color-title;
-  }
-
   @include mobile {
     text-align: center;
   }
@@ -23,5 +18,10 @@
       color: $color-bg;
       background-color: $color-primary;
     }
+  }
+
+  span {
+    @include trans;
+    color: $color-title;
   }
 }

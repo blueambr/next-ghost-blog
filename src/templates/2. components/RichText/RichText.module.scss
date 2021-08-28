@@ -2,10 +2,156 @@
 
 .rich-text {
   :global {
+    .kg {
+      &-bookmark {
+        &-container {
+          display: block;
+          border: rem(2) solid $color-primary;
+          border-radius: 5px;
+          box-shadow: $shadow-primary;
+
+          @include laptop {
+            display: flex;
+          }
+        }
+
+        &-content {
+          padding: rem(20);
+
+          @include laptop {
+            width: 60%;
+          }
+        }
+
+        &-title {
+          @include font(ti-700);
+          margin-bottom: rem(5);
+          font-size: rem(16);
+          color: $color-title;
+        }
+
+        &-description {
+          margin-bottom: rem(20);
+          font-size: rem(16);
+          color: $color-text;
+        }
+
+        &-metadata {
+          display: flex;
+        }
+
+        &-icon {
+          width: rem(20);
+          height: rem(20);
+          margin-right: rem(10);
+        }
+
+        &-author {
+          font-size: rem(16);
+          color: $color-text;
+        }
+
+        &-thumbnail {
+          @include laptop {
+            width: 40%;
+          }
+
+          img {
+            max-width: none;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    code {
+      padding: rem(2) rem(5);
+      border-radius: 5px;
+      background: $color-bg--light;
+    }
+
+    em {
+      @include font(te-400-it);
+    }
+
+    figcaption {
+      margin-top: rem(10);
+      text-align: center;
+      font-size: rem(16);
+      color: $color-text--dark;
+    }
+
+    figure {
+      &.kg-width-wide {
+        img {
+          max-width: none;
+          width: calc(100% + 30px);
+          margin: 0 -15px;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
+    }
+
+    h2 {
+      @include font(ti-700);
+      font-size: rem(30);
+
+      @include laptop {
+        font-size: rem(34);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+
+      em,
+      strong {
+        @include font(ti-700);
+      }
+    }
+
     img {
       display: block;
       max-width: 100%;
       height: auto;
+    }
+
+    li {
+      font-size: rem(20);
+
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+
+    ol,
+    ul {
+      padding-left: rem(20);
+
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
+    }
+
+    p {
+      font-size: rem(20);
+
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
+    }
+
+    strong {
+      @include font(te-700);
+    }
+
+    ul {
+      li {
+        list-style: disc;
+      }
     }
   }
 }

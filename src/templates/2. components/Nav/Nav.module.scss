@@ -24,15 +24,15 @@
     padding: rem(15);
   }
 
-  span {
-    @include trans;
-    color: $color-title;
-  }
-
   @include hf {
     span {
       color: $color-bg;
       background-color: $color-primary;
     }
+  }
+
+  span {
+    @include trans;
+    color: $color-title;
   }
 }
