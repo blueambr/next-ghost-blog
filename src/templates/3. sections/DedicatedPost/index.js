@@ -36,6 +36,8 @@ const DedicatedPost = ({ data }) => {
                   alt={`${primary_author.name}'s avatar`}
                   width={50}
                   height={50}
+                  placeholder="blur"
+                  blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                 />
               </div>
               <div className={styles.info__text}>
@@ -61,6 +63,8 @@ const DedicatedPost = ({ data }) => {
           alt="Post's cover"
           layout="fill"
           objectFit="cover"
+          placeholder="blur"
+          blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         />
       </div>
       <div className={styles['rich-text']}>

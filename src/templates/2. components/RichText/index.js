@@ -11,6 +11,7 @@ const RichText = ({ data }) => {
       /**
        * Lazyload RTE images.
        * Make the lazyload canvas the same width and height as the resulted image.
+       * Fill the canvas with a transparent Base64 until the original image is loaded.
        * Unfortunately, I couldn't find a way to use next/image for them.
        */
       const { offsetWidth } = rte.current;
@@ -19,7 +20,10 @@ const RichText = ({ data }) => {
       images.map((img) => {
         const { src, width, height } = img;
 
-        img.setAttribute('src', 'null');
+        img.setAttribute(
+          'src',
+          'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
+        );
         img.setAttribute('width', offsetWidth);
         img.setAttribute('height', offsetWidth * (width / height));
         img.setAttribute('data-src', src);

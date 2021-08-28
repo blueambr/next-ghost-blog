@@ -19,6 +19,8 @@ const Post = ({ data }) => {
                   width={100}
                   height={70}
                   layout="responsive"
+                  placeholder="blur"
+                  blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                 />
               </a>
             </Link>
