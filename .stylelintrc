@@ -104,6 +104,7 @@
       "color",
       "fill",
       "stroke",
+      "object-fit",
       "background",
       "background-image",
       "background-color",
@@ -205,6 +206,10 @@
       {
         "type": "rule",
         "selector": "^&::after"
+      },
+      {
+        "type": "rule",
+        "selector": "^&::marker"
       },
       {
         "type": "rule",

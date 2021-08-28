@@ -62,11 +62,65 @@
           }
         }
       }
+
+      &-gallery {
+        &-row {
+          display: flex;
+          margin: 0 rem(-20);
+        }
+
+        &-image {
+          width: 50%;
+          padding: 0 rem(5);
+
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      &-image-card.kg-width {
+        &-wide,
+        &-full {
+          img {
+            max-width: none;
+            width: calc(100% + 30px);
+            margin: 0 -15px;
+          }
+        }
+      }
+    }
+
+    blockquote {
+      @include font(te-400-it);
+      position: relative;
+      padding-left: rem(20);
+      font-size: rem(20);
+      color: $color-text;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: rem(3);
+        height: 100%;
+        border-radius: 5px;
+        background: $color-primary;
+        content: '';
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
     }
 
     code {
       padding: rem(2) rem(5);
+      border: rem(1) solid $color-primary;
       border-radius: 5px;
+      color: $color-text;
       background: $color-bg--light;
     }
 
@@ -82,22 +136,21 @@
     }
 
     figure {
-      &.kg-width-wide {
-        img {
-          max-width: none;
-          width: calc(100% + 30px);
-          margin: 0 -15px;
-        }
-      }
-
       &:not(:last-child) {
         margin-bottom: rem(25);
+      }
+
+      + .kg-gallery-card,
+      + .kg-image-card {
+        margin-top: rem(-15);
       }
     }
 
     h2 {
       @include font(ti-700);
+      margin-top: rem(50);
       font-size: rem(30);
+      color: $color-text;
 
       @include laptop {
         font-size: rem(34);
@@ -113,6 +166,15 @@
       }
     }
 
+    hr {
+      width: 100%;
+      height: rem(3);
+      margin: rem(50) 0;
+      border: none;
+      border-radius: 5px;
+      background-color: $color-primary;
+    }
+
     img {
       display: block;
       max-width: 100%;
@@ -121,6 +183,7 @@
 
     li {
       font-size: rem(20);
+      color: $color-text;
 
       &:not(:last-child) {
         margin-bottom: rem(15);
@@ -138,6 +201,7 @@
 
     p {
       font-size: rem(20);
+      color: $color-text;
 
       &:not(:last-child) {
         margin-bottom: rem(25);
@@ -151,6 +215,10 @@
     ul {
       li {
         list-style: disc;
+
+        &::marker {
+          color: $color-primary;
+        }
       }
     }
   }
