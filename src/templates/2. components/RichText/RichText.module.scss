@@ -6,59 +6,120 @@
       &-bookmark {
         &-container {
           display: block;
+          overflow: hidden;
           border: rem(2) solid $color-primary;
           border-radius: 5px;
           box-shadow: $shadow-primary;
 
-          @include laptop {
+          @include tablet {
             display: flex;
+          }
+
+          @include hf {
+            .kg-bookmark {
+              &-content {
+                &::before {
+                  opacity: 1;
+                }
+              }
+            }
           }
         }
 
         &-content {
+          position: relative;
+          z-index: 1;
           padding: rem(20);
 
-          @include laptop {
+          @include tablet {
             width: 60%;
+          }
+
+          @include laptop {
+            padding: rem(30) rem(20);
+          }
+
+          &::before {
+            @include trans;
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            display: block;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background-image: $color-gradient;
+            content: '';
           }
         }
 
         &-title {
           @include font(ti-700);
+          position: relative;
+          z-index: 1;
           margin-bottom: rem(5);
           font-size: rem(16);
           color: $color-title;
+
+          @include laptop {
+            font-size: rem(20);
+          }
         }
 
         &-description {
+          position: relative;
+          z-index: 1;
           margin-bottom: rem(20);
           font-size: rem(16);
           color: $color-text;
+
+          @include laptop {
+            font-size: rem(20);
+          }
         }
 
         &-metadata {
+          position: relative;
+          z-index: 1;
           display: flex;
+          align-items: center;
         }
 
         &-icon {
           width: rem(20);
           height: rem(20);
           margin-right: rem(10);
+
+          @include laptop {
+            width: rem(24);
+            height: rem(24);
+            margin-right: rem(15);
+          }
         }
 
         &-author {
           font-size: rem(16);
           color: $color-text;
+
+          @include laptop {
+            font-size: rem(20);
+          }
         }
 
         &-thumbnail {
-          @include laptop {
+          @include tablet {
             width: 40%;
           }
 
           img {
             max-width: none;
             width: 100%;
+            object-fit: cover;
+
+            @include tablet {
+              height: 100%;
+            }
           }
         }
       }
@@ -72,12 +133,20 @@
           border-radius: 5px;
           box-shadow: $shadow-primary;
           background: $color-bg;
+
+          @include laptop {
+            padding: rem(30) rem(20);
+          }
         }
 
         code {
           padding: 0;
           border: none;
           font-size: rem(20);
+
+          @include laptop {
+            font-size: rem(24);
+          }
         }
       }
 
@@ -85,6 +154,10 @@
         &-container {
           + figcaption {
             margin-top: rem(25);
+
+            @include laptop {
+              margin-top: rem(30);
+            }
           }
         }
 
@@ -94,8 +167,21 @@
           margin: 0 rem(-20) rem(-25);
 
           @include container {
-            margin-right: rem(-5);
-            margin-left: rem(-5);
+            width: calc(100vw + #{rem(10)});
+            margin: 0
+              calc(
+                (100vw - (#{$container-width} - (#{$container-padding} * 2)) + #{rem(10)}) / 2 * -1
+              )
+              rem(-25);
+          }
+
+          @include laptop {
+            width: calc(100vw + #{rem(15)});
+            margin: 0
+              calc(
+                (100vw - (#{$container-width} - (#{$container-padding} * 2)) + #{rem(15)}) / 2 * -1
+              )
+              rem(-30);
           }
         }
 
@@ -108,6 +194,10 @@
             width: 33.33333%;
           }
 
+          @include laptop {
+            padding: 0 rem(7.5) rem(15);
+          }
+
           img {
             width: 100%;
             height: 100%;
@@ -116,32 +206,45 @@
         }
       }
 
-      &-image-card.kg-width {
-        &-wide,
-        &-full {
-          img {
-            max-width: none;
-            width: calc(100% + (#{$container-padding} * 2));
-            margin: 0 calc(#{$container-padding} * -1);
+      &-image-card {
+        &.kg-width {
+          &-wide,
+          &-full {
+            img {
+              max-width: none;
+              width: calc(100% + (#{$container-padding} * 2));
+              margin: 0 calc(#{$container-padding} * -1);
+            }
           }
-        }
 
-        &-wide {
-          img {
-            @include container {
-              max-width: 100%;
-              width: auto;
-              margin: 0 auto;
+          &-wide {
+            img {
+              @include container {
+                width: calc(
+                  100vw - ((100vw - (#{$container-width} - (#{$container-padding} * 2))) / 2)
+                );
+                margin: 0
+                  calc((100vw - (#{$container-width} - (#{$container-padding} * 2))) / 4 * -1);
+              }
+            }
+          }
+
+          &-full {
+            img {
+              @include container {
+                width: 100vw;
+                margin: 0
+                  calc((100vw - (#{$container-width} - (#{$container-padding} * 2))) / 2 * -1);
+              }
             }
           }
         }
 
-        &-full {
-          img {
-            @include container {
-              width: 100vw;
-              margin: 0 calc((100vw - (#{$container-width} - (#{$container-padding} * 2))) / 2 * -1);
-            }
+        img {
+          @include container {
+            max-width: 100%;
+            width: auto;
+            margin: 0 auto;
           }
         }
       }
@@ -158,6 +261,10 @@
 
         @include hf {
           background-size: 100% rem(20);
+
+          @include laptop {
+            background-size: 100% rem(24);
+          }
         }
       }
     }
@@ -168,6 +275,10 @@
       padding-left: rem(20);
       font-size: rem(20);
       color: $color-text;
+
+      @include laptop {
+        font-size: rem(24);
+      }
 
       &::before {
         position: absolute;
@@ -183,6 +294,10 @@
 
       &:not(:last-child) {
         margin-bottom: rem(25);
+
+        @include laptop {
+          margin-bottom: rem(30);
+        }
       }
     }
 
@@ -204,11 +319,20 @@
       text-align: center;
       font-size: rem(16);
       color: $color-text--dark;
+
+      @include laptop {
+        margin-top: rem(15);
+        font-size: rem(20);
+      }
     }
 
     figure {
       &:not(:last-child) {
         margin-bottom: rem(25);
+
+        @include laptop {
+          margin-bottom: rem(30);
+        }
       }
 
       + .kg-gallery-card,
@@ -256,6 +380,10 @@
       font-size: rem(20);
       color: $color-text;
 
+      @include laptop {
+        font-size: rem(24);
+      }
+
       &:not(:last-child) {
         margin-bottom: rem(15);
       }
@@ -267,6 +395,10 @@
 
       &:not(:last-child) {
         margin-bottom: rem(25);
+
+        @include laptop {
+          margin-bottom: rem(30);
+        }
       }
     }
 
@@ -274,8 +406,16 @@
       font-size: rem(20);
       color: $color-text;
 
+      @include laptop {
+        font-size: rem(24);
+      }
+
       &:not(:last-child) {
         margin-bottom: rem(25);
+
+        @include laptop {
+          margin-bottom: rem(30);
+        }
       }
     }
 
