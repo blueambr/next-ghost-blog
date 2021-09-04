@@ -107,6 +107,16 @@
           }
         }
 
+        &-publisher {
+          margin-left: rem(10);
+          font-size: rem(16);
+          color: $color-text;
+
+          @include laptop {
+            font-size: rem(20);
+          }
+        }
+
         &-thumbnail {
           @include tablet {
             width: 40%;
@@ -312,6 +322,10 @@
 
     em {
       @include font(te-400-it);
+
+      strong {
+        @include font(te-700-it);
+      }
     }
 
     figcaption {
@@ -343,12 +357,15 @@
 
     h2 {
       @include font(ti-700);
-      margin-top: rem(50);
       font-size: rem(30);
       color: $color-text;
 
       @include laptop {
         font-size: rem(34);
+      }
+
+      &:not(:first-child) {
+        margin-top: rem(50);
       }
 
       &:not(:last-child) {
@@ -358,16 +375,57 @@
       em,
       strong {
         @include font(ti-700);
+
+        em,
+        strong {
+          @include font(ti-700);
+        }
+      }
+    }
+
+    h3 {
+      @include font(ti-700);
+      margin-top: rem(40);
+      font-size: rem(24);
+      color: $color-text;
+
+      @include laptop {
+        font-size: rem(28);
+      }
+
+      &:not(:first-child) {
+        margin-top: rem(40);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+
+      em,
+      strong {
+        @include font(ti-700);
+
+        em,
+        strong {
+          @include font(ti-700);
+        }
       }
     }
 
     hr {
       width: 100%;
       height: rem(3);
-      margin: rem(50) 0;
       border: none;
       border-radius: 5px;
       background-color: $color-primary;
+
+      &:not(:first-child) {
+        margin-top: rem(50);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(50);
+      }
     }
 
     img {
@@ -393,11 +451,26 @@
     ul {
       padding-left: rem(20);
 
+      @include laptop {
+        padding-left: rem(25);
+      }
+
       &:not(:last-child) {
         margin-bottom: rem(25);
 
         @include laptop {
           margin-bottom: rem(30);
+        }
+      }
+    }
+
+    ol {
+      li {
+        list-style: decimal;
+
+        &::marker {
+          @include font(te-700);
+          color: $color-primary;
         }
       }
     }
@@ -421,6 +494,10 @@
 
     strong {
       @include font(te-700);
+
+      em {
+        @include font(te-700-it);
+      }
     }
 
     ul {
