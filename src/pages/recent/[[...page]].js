@@ -19,23 +19,7 @@ const RecentPage = ({ settings, posts, pagination }) => {
 
 export default RecentPage;
 
-export const getStaticPaths = async () => {
-  const posts = await getAllPostsPage();
-
-  const { meta } = posts;
-  const { pagination } = meta;
-  const { pages } = pagination;
-
-  const paths = [{ params: { page: [] } }];
-
-  for (let i = 0; i < pages; i++) {
-    paths.push({ params: { page: [(i + 1).toString()] } });
-  }
-
-  return { paths, fallback: false };
-};
-
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const { params } = context;
   const { page } = params;
 

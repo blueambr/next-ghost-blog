@@ -3,15 +3,7 @@ import Layout from '@/layout';
 import DedicatedPost from '@/sections/DedicatedPost';
 
 const PostPage = ({ settings, post }) => {
-  const {
-    authors,
-    excerpt,
-    feature_image,
-    published_at,
-    tags,
-    title,
-    updated_at,
-  } = post;
+  const { authors, excerpt, feature_image, published_at, tags, title, updated_at } = post;
   const meta = {
     authors,
     ogType: 'article',
@@ -32,17 +24,7 @@ const PostPage = ({ settings, post }) => {
 
 export default PostPage;
 
-export const getStaticPaths = async () => {
-  const posts = await getAllPosts();
-
-  const paths = posts.map((post) => ({
-    params: { slug: post.slug },
-  }));
-
-  return { paths, fallback: false };
-};
-
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const { params } = context;
   const { slug } = params;
 

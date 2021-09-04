@@ -17,7 +17,7 @@ const FeaturedPage = ({ settings, posts }) => {
 
 export default FeaturedPage;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const settings = await getSettings();
   const posts = await getFeaturedPosts('all');
 

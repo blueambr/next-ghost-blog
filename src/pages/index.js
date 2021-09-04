@@ -24,7 +24,7 @@ const Home = ({ settings, posts, featuredPosts, pagination }) => {
 
 export default Home;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const settings = await getSettings();
   const posts = await getAllPostsPage();
   const featuredPosts = await getFeaturedPosts();
