@@ -5,16 +5,8 @@ import RichText from '@/components/RichText';
 import styles from './DedicatedPost.module.scss';
 
 const DedicatedPost = ({ data }) => {
-  const {
-    excerpt,
-    feature_image,
-    html,
-    primary_author,
-    reading_time,
-    tags,
-    title,
-    updated_at,
-  } = data;
+  const { excerpt, feature_image, html, primary_author, reading_time, tags, title, updated_at } =
+    data;
 
   return (
     <section className={styles.post}>
@@ -46,10 +38,14 @@ const DedicatedPost = ({ data }) => {
                   <span className={styles.info__updated}>
                     {format(new Date(updated_at), 'MMM do, yyyy')}
                   </span>
-                  <span className={styles.divider}>·</span>
-                  <span className={styles['info__time-to-read']}>
-                    {`${reading_time} min read`}
-                  </span>
+                  {reading_time && (
+                    <>
+                      <span className={styles.divider}>·</span>
+                      <span className={styles['info__time-to-read']}>
+                        {`${reading_time} min read`}
+                      </span>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
