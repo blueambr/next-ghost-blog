@@ -1,8 +1,14 @@
 @import 'src/styles/includes/includes';
 
 .header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
   padding: rem(25) 0 rem(15);
-  background-color: $color-bg;
+  background-color: rgba($color-bg, 0.5);
 
   @include laptop {
     padding: rem(25) 0;

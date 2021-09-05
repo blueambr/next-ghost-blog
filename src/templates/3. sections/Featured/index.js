@@ -7,6 +7,7 @@ const Featured = ({ posts }) => {
 
   return (
     <section className={styles.featured}>
+      <div className={styles.bg} />
       <div className="container">
         <div className={styles.wrapper}>
           <div className={styles['page-link']}>
