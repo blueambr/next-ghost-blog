@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: appleboy/ssh-action@v0.1.4
+        with:
+          host: ${{secrets.SSH_HOST}}
+          key: ${{secrets.SSH_KEY}}
+          username: ${{secrets.SSH_USERNAME}}
+          
+          script: |
+            sudo -i -u ghost-mgr
+            cd /var/www/ngb
+            git pull
+            npm i
+            pm2 stop ngb
+            npm run build
+            pm2 start ngb
