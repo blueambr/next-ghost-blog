@@ -17,7 +17,6 @@ jobs:
           username: ${{secrets.SSH_USERNAME}}
           
           script: |
-            sudo -i -u ghost-mgr
             cd /var/www/ngb
             git pull
             npm i
