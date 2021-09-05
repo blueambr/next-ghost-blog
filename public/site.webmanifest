@@ -1,6 +1,6 @@
 {
-  "name": "Vlad G",
-  "short_name": "Vlad G",
+  "name": "Vlad G Dev",
+  "short_name": "Vlad G Dev",
   "icons": [
     {
       "src": "/favicon/android-chrome-192x192.png",
@@ -13,7 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#008fff",
+  "background_color": "#008fff",
+  "start_url": "https://vladg.dev",
   "display": "standalone"
 }
