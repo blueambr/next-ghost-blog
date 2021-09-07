@@ -39,6 +39,7 @@
 .trigger {
   margin-top: rem(10);
   text-align: center;
+  transition: opacity 0.9s;
 
   &__button {
     @include trans;
@@ -72,12 +73,22 @@
 
   &_show {
     position: absolute;
-    right: rem(-55);
+    right: -9999px;
     bottom: rem(15);
+    opacity: 0;
 
     @include laptop {
       right: rem(-65);
       bottom: rem(25);
     }
+
+    &.trigger_hidden {
+      right: rem(-55);
+      opacity: 1;
+    }
+  }
+
+  &_hidden {
+    opacity: 0;
   }
 }
