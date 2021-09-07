@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Logo from '@/elements/Logo';
 import Nav from '@/components/Nav';
+import Socials from '@/components/Socials';
 import styles from './Header.module.scss';
 
 const Trigger = ({ classname, icon, title }) => {
@@ -31,6 +32,26 @@ const Trigger = ({ classname, icon, title }) => {
 
 const Header = ({ data }) => {
   const { title, navigation } = data;
+  const socials = [
+    {
+      id: 'githubId',
+      href: 'https://github.com/hotepp',
+      icon: 'github',
+      title: 'GitHub',
+    },
+    {
+      id: 'linkedinId',
+      href: 'https://www.linkedin.com/in/hotepp/',
+      icon: 'linkedin',
+      title: 'LinkedIn',
+    },
+    {
+      id: 'telegramId',
+      href: 'https://t.me/iamhotepp',
+      icon: 'telegram',
+      title: 'Telegram',
+    },
+  ];
   const trigger = {
     showTitle: 'Show the header',
     hideTitle: 'Hide the header',
@@ -50,19 +71,26 @@ const Header = ({ data }) => {
               <Nav data={navigation} />
             </div>
           </div>
-          <Trigger
-            icon={faEyeSlash}
-            isSidebarHidden={isSidebarHidden}
-            setIsSidebarHidden={setIsSidebarHidden}
-            title={trigger.hideTitle}
-          />
-          <Trigger
-            classname={styles.trigger_show}
-            icon={faEye}
-            isSidebarHidden={isSidebarHidden}
-            setIsSidebarHidden={setIsSidebarHidden}
-            title={trigger.showTitle}
-          />
+          <div className={styles.footer}>
+            <div className={styles.socials}>
+              <Socials list={socials} />
+            </div>
+            <div className={styles.triggers}>
+              <Trigger
+                icon={faEyeSlash}
+                isSidebarHidden={isSidebarHidden}
+                setIsSidebarHidden={setIsSidebarHidden}
+                title={trigger.hideTitle}
+              />
+              <Trigger
+                classname={styles.trigger_show}
+                icon={faEye}
+                isSidebarHidden={isSidebarHidden}
+                setIsSidebarHidden={setIsSidebarHidden}
+                title={trigger.showTitle}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </header>

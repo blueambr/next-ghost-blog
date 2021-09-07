@@ -1,0 +1,36 @@
+@import 'src/styles/includes/includes';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 rem(-7.5) rem(-15);
+}
+
+.link {
+  display: block;
+  padding: 0 rem(7.5) rem(15);
+
+  @include hf {
+    .icon {
+      color: $color-primary;
+    }
+  }
+}
+
+.icon {
+  @include trans;
+  width: rem(25);
+  color: $color-title;
+
+  @include tablet {
+    width: rem(30);
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
