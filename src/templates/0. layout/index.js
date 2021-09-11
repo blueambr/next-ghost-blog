@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Header from '@/sections/Header';
 
-const Layout = ({ data, meta, children }) => {
+const Layout = ({ data, meta, about, children }) => {
   const rootUrl = 'https://vladg.dev';
   const { asPath } = useRouter();
   const { title, description } = data;
@@ -191,7 +191,7 @@ const Layout = ({ data, meta, children }) => {
         {/* * */}
       </Head>
 
-      <Header data={data} />
+      <Header data={data} about={about} />
       <main>{children}</main>
     </>
   );

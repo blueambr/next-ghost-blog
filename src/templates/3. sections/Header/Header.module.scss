@@ -20,12 +20,12 @@
     width: 30%;
   }
 
-  &_hidden {
-    transform: translate(-100%, 0);
-  }
-
   :global(.container) {
     height: 100%;
+  }
+
+  &_hidden {
+    transform: translate(-100%, 0);
   }
 }
 
@@ -54,6 +54,12 @@
 
 .logo {
   text-align: center;
+}
+
+.about {
+  overflow: auto;
+  max-height: rem(150);
+  margin-top: rem(10);
 }
 
 .footer {

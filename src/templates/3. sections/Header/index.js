@@ -1,9 +1,10 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import SidebarVisibilityContext from 'contexts/SidebarVisibility';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Logo from '@/elements/Logo';
 import Nav from '@/components/Nav';
+import RichText from '@/components/RichText';
 import Socials from '@/components/Socials';
 import styles from './Header.module.scss';
 
@@ -17,7 +18,9 @@ const Trigger = ({ classname, icon, title }) => {
       }`}
     >
       <button
-        className={styles.trigger__button}
+        className={`${styles.trigger__button} ${
+          classname === styles.trigger_show ? styles.trigger__button_show : ''
+        }`}
         type="button"
         title={title}
         onClick={() => setIsSidebarHidden(!isSidebarHidden)}
@@ -30,7 +33,7 @@ const Trigger = ({ classname, icon, title }) => {
   );
 };
 
-const Header = ({ data }) => {
+const Header = ({ data, about }) => {
   const { title, navigation } = data;
   const socials = [
     {
@@ -59,8 +62,41 @@ const Header = ({ data }) => {
 
   const [isSidebarHidden, setIsSidebarHidden] = useContext(SidebarVisibilityContext);
 
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const header = headerRef.current;
+    const links = [...header.getElementsByTagName('a')];
+    const buttons = [...header.getElementsByTagName('button')];
+
+    const hideSidebarOnTab = (e) => {
+      if (e.keyCode === 9) {
+        setIsSidebarHidden(true);
+      }
+    };
+
+    const showSidebarOnFocus = (e) => {
+      if (!e.target.classList.contains(styles.trigger__button_show)) {
+        setIsSidebarHidden(false);
+      }
+    };
+
+    links.map((link) => {
+      link.addEventListener('focus', showSidebarOnFocus);
+      link.addEventListener('keydown', hideSidebarOnTab);
+    });
+
+    buttons.map((button) => {
+      button.addEventListener('focus', showSidebarOnFocus);
+      button.addEventListener('keydown', hideSidebarOnTab);
+    });
+  }, [headerRef, setIsSidebarHidden]);
+
   return (
-    <header className={`${styles.header} ${isSidebarHidden ? styles.header_hidden : ''}`}>
+    <header
+      className={`${styles.header} ${isSidebarHidden ? styles.header_hidden : ''}`}
+      ref={headerRef}
+    >
       <div className="container">
         <div className={styles.wrapper}>
           <button
@@ -75,6 +111,9 @@ const Header = ({ data }) => {
             </div>
             <div className={styles.nav}>
               <Nav data={navigation} />
+            </div>
+            <div className={styles.about}>
+              <RichText data={about} isSmall />
             </div>
           </div>
           <div className={styles.footer}>
