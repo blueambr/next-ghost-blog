@@ -90,3 +90,8 @@ export const getTagPage = async (slug, page) =>
     .catch((err) => {
       console.error(err);
     });
+
+export const getAboutPage = async () =>
+  api.pages.read({ id: '612779ea60295e1a8df302a5' }).catch((err) => {
+    console.error(err);
+  });
