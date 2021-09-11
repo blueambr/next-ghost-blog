@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Header from '@/sections/Header';
-import styles from './Layout.module.scss';
 
 const Layout = ({ data, meta, children }) => {
   const rootUrl = 'https://vladg.dev';
@@ -193,7 +192,7 @@ const Layout = ({ data, meta, children }) => {
       </Head>
 
       <Header data={data} />
-      <main className={styles.main}>{children}</main>
+      <main>{children}</main>
     </>
   );
 };

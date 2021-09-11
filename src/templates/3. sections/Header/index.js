@@ -13,7 +13,7 @@ const Trigger = ({ classname, icon, title }) => {
   return (
     <div
       className={`${styles.trigger} ${classname || ''} ${
-        isSidebarHidden ? styles.trigger_hidden : ''
+        isSidebarHidden ? styles['trigger_hidden-sidebar'] : ''
       }`}
     >
       <button
@@ -53,8 +53,8 @@ const Header = ({ data }) => {
     },
   ];
   const trigger = {
-    showTitle: 'Show the header',
-    hideTitle: 'Hide the header',
+    titleShow: 'Show the header',
+    titleHide: 'Hide the header',
   };
 
   const [isSidebarHidden, setIsSidebarHidden] = useContext(SidebarVisibilityContext);
@@ -63,6 +63,12 @@ const Header = ({ data }) => {
     <header className={`${styles.header} ${isSidebarHidden ? styles.header_hidden : ''}`}>
       <div className="container">
         <div className={styles.wrapper}>
+          <button
+            className={`${styles.dimmer} ${isSidebarHidden ? styles.dimmer_hidden : ''}`}
+            type="button"
+            title={trigger.titleHide}
+            onClick={() => setIsSidebarHidden(true)}
+          />
           <div className={styles.content}>
             <div className={styles.logo}>
               <Logo data={title} />
@@ -80,14 +86,14 @@ const Header = ({ data }) => {
                 icon={faEyeSlash}
                 isSidebarHidden={isSidebarHidden}
                 setIsSidebarHidden={setIsSidebarHidden}
-                title={trigger.hideTitle}
+                title={trigger.titleHide}
               />
               <Trigger
                 classname={styles.trigger_show}
                 icon={faEye}
                 isSidebarHidden={isSidebarHidden}
                 setIsSidebarHidden={setIsSidebarHidden}
-                title={trigger.showTitle}
+                title={trigger.titleShow}
               />
             </div>
           </div>

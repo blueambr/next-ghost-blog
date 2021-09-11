@@ -1,8 +1,0 @@
-@import 'src/styles/includes/includes';
-
-.main {
-  @include laptop {
-    width: 60%;
-    margin: 0 auto;
-  }
-}

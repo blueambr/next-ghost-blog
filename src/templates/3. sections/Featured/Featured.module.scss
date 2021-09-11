@@ -1,28 +1,8 @@
 @import 'src/styles/includes/includes';
 
 .featured {
-  position: relative;
   padding: rem(30) 0;
-}
-
-.bg {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: $color-gradient;
-
-  @include laptop {
-    left: calc((100vw - 60vw) / 2 * -1);
-    width: 100vw;
-  }
-}
-
-.wrapper {
-  position: relative;
-  z-index: 1;
 }
 
 .page-link {
