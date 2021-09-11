@@ -2,20 +2,19 @@
 
 // Retina
 @mixin retina {
-  @media screen and (-webkit-min-device-pixel-ratio: 1.5),
-    screen and (min-resolution: 144dpi) {
+  @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
     @content;
   }
 }
 
 // Breakpoints, Mobile-first
-@mixin mobile-sm {
+@mixin mobile {
   @media screen and (max-width: 768px) {
     @content;
   }
 }
 
-@mixin mobile {
+@mixin touch {
   @media screen and (max-width: 1024px) {
     @content;
   }

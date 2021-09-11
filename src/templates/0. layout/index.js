@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Header from '@/sections/Header';
 
-const Layout = ({ data, meta, children }) => {
+const Layout = ({ data, meta, about, children }) => {
   const rootUrl = 'https://vladg.dev';
   const { asPath } = useRouter();
   const { title, description } = data;
@@ -172,11 +172,11 @@ const Layout = ({ data, meta, children }) => {
         {/* * */}
 
         {/* Favicon */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=2" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=2" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=2" />
+        <link rel="manifest" href="/site.webmanifest?v=2" />
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=2" color="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000000" />
         {/* * */}
@@ -191,7 +191,7 @@ const Layout = ({ data, meta, children }) => {
         {/* * */}
       </Head>
 
-      <Header data={data} />
+      <Header data={data} about={about} />
       <main>{children}</main>
     </>
   );

@@ -3,11 +3,9 @@
 .nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-
-  @include mobile {
-    justify-content: center;
-  }
+  margin: 0 rem(-10);
 }
 
 .link {
@@ -18,10 +16,6 @@
 
   @include laptop {
     font-size: rem(24);
-  }
-
-  @include laptop {
-    padding: rem(15);
   }
 
   @include hf {

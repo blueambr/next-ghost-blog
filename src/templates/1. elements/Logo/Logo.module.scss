@@ -3,14 +3,11 @@
 .link {
   @include font(ti-700);
   display: block;
+  text-align: center;
   font-size: rem(30);
 
   @include laptop {
     font-size: rem(34);
-  }
-
-  @include mobile {
-    text-align: center;
   }
 
   @include hf {

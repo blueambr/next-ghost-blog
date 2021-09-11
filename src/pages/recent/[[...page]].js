@@ -1,8 +1,8 @@
-import { getSettings, getAllPostsPage } from 'lib/content';
+import { getSettings, getAboutPage, getAllPostsPage } from 'lib/content';
 import Layout from '@/layout';
 import Posts from '@/sections/Posts';
 
-const RecentPage = ({ settings, posts, pagination }) => {
+const RecentPage = ({ settings, about, posts, pagination }) => {
   const { page } = pagination;
   const meta = {
     pageTitle: 'Recent posts',
@@ -11,7 +11,7 @@ const RecentPage = ({ settings, posts, pagination }) => {
   };
 
   return (
-    <Layout data={settings} meta={meta}>
+    <Layout data={settings} meta={meta} about={about}>
       <Posts posts={posts} pagination={pagination} paginationRoot="recent" />
     </Layout>
   );
@@ -24,12 +24,14 @@ export const getServerSideProps = async (context) => {
   const { page } = params;
 
   const settings = await getSettings();
+  const aboutPage = await getAboutPage();
   const posts = await getAllPostsPage(page ? page[0] : 1);
 
   const { meta } = posts;
+  const about = aboutPage.html;
   const { pagination } = meta;
 
   return {
-    props: { settings, posts, pagination },
+    props: { settings, about, posts, pagination },
   };
 };

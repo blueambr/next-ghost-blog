@@ -1,8 +1,8 @@
-import { getSettings, getAllPosts, getSinglePost } from 'lib/content';
+import { getSettings, getAboutPage, getSinglePost } from 'lib/content';
 import Layout from '@/layout';
 import DedicatedPost from '@/sections/DedicatedPost';
 
-const PostPage = ({ settings, post }) => {
+const PostPage = ({ settings, about, post }) => {
   const { authors, excerpt, feature_image, published_at, tags, title, updated_at } = post;
   const meta = {
     authors,
@@ -16,7 +16,7 @@ const PostPage = ({ settings, post }) => {
   };
 
   return (
-    <Layout data={settings} meta={meta}>
+    <Layout data={settings} meta={meta} about={about}>
       <DedicatedPost data={post} />
     </Layout>
   );
@@ -29,9 +29,12 @@ export const getServerSideProps = async (context) => {
   const { slug } = params;
 
   const settings = await getSettings();
+  const aboutPage = await getAboutPage();
   const post = await getSinglePost(slug);
 
+  const about = aboutPage.html;
+
   return {
-    props: { settings, post },
+    props: { settings, about, post },
   };
 };

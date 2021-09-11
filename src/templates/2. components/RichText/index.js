@@ -3,7 +3,7 @@ import 'lazysizes';
 import reframe from 'reframe.js';
 import styles from './RichText.module.scss';
 
-const RichText = ({ data }) => {
+const RichText = ({ data, isSmall }) => {
   const rte = useRef(null);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const RichText = ({ data }) => {
 
   return (
     <div
-      className={styles['rich-text']}
+      className={`${styles['rich-text']} ${isSmall ? styles['rich-text_small'] : ''}`}
       dangerouslySetInnerHTML={{ __html: data }}
       ref={rte}
     />

@@ -3,7 +3,7 @@
 .cover {
   position: relative;
 
-  @include mobile-sm {
+  @include mobile {
     max-width: rem(400);
     margin: 0 auto;
   }

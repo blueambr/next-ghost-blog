@@ -10,7 +10,7 @@
 .cover {
   width: 100%;
 
-  @include mobile-sm {
+  @include mobile {
     max-width: rem(400);
     margin-bottom: rem(20);
   }
