@@ -1,4 +1,5 @@
 import { useContext, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import SidebarVisibilityContext from 'contexts/SidebarVisibility';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
@@ -119,6 +120,25 @@ const Header = ({ data, about }) => {
           <div className={styles.footer}>
             <div className={styles.socials}>
               <Socials list={socials} />
+            </div>
+            <div className={styles.powered}>
+              <a
+                className={styles.powered__link}
+                href="https://www.digitalocean.com/?refcode=a1995348068b&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
+                title="Powered by DigitalOcean"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className={styles.powered__img}
+                  src="/do.svg"
+                  alt="DigitalOcean Referral Badge"
+                  width={125}
+                  height={40}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                />
+              </a>
             </div>
             <div className={styles.triggers}>
               <Trigger

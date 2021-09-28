@@ -66,6 +66,21 @@
   overflow: hidden;
 }
 
+.powered {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(15);
+
+  &__link {
+    @include trans;
+    display: flex;
+
+    @include hf {
+      opacity: 0.7;
+    }
+  }
+}
+
 .trigger {
   margin-top: rem(15);
   text-align: center;

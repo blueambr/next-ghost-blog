@@ -25,8 +25,8 @@ const Socials = ({ list }) => {
         {list.map((item) => (
           <li className={styles.item} key={item.id}>
             <a
-              href={item.href}
               className={styles.link}
+              href={item.href}
               title={item.title}
               target="_blank"
               rel="noopener noreferrer"
