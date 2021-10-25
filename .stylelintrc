@@ -219,6 +219,10 @@
       },
       {
         "type": "rule",
+        "selector": "^&::first-letter"
+      },
+      {
+        "type": "rule",
         "selector": "^&:first-child"
       },
       {

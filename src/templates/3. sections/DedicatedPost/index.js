@@ -9,7 +9,7 @@ const DedicatedPost = ({ data }) => {
     data;
 
   return (
-    <section className={styles.post}>
+    <section className={`section ${styles.post}`}>
       <div className={styles.head}>
         <div className="container">
           <div className={styles.head__wrapper}>

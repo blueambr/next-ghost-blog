@@ -4,7 +4,7 @@ import Pagination from '@/components/Pagination';
 import styles from './Posts.module.scss';
 
 const Posts = ({ pageLink, posts, pagination, paginationRoot }) => (
-  <section className={styles.posts}>
+  <section className={`section ${styles.posts}`}>
     <div className="container">
       <div className={styles.wrapper}>
         {pageLink && (

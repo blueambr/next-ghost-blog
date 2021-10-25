@@ -1,5 +1,6 @@
 import { getSettings, getAboutPage, getFeaturedPosts } from 'lib/content';
 import Layout from '@/layout';
+import Crumbs from '@/sections/Crumbs';
 import Posts from '@/sections/Posts';
 
 const FeaturedPage = ({ settings, about, posts }) => {
@@ -10,7 +11,9 @@ const FeaturedPage = ({ settings, about, posts }) => {
 
   return (
     <Layout data={settings} meta={meta} about={about}>
+      <Crumbs />
       <Posts posts={posts} />
+      <Crumbs />
     </Layout>
   );
 };

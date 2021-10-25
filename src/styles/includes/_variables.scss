@@ -1,9 +1,3 @@
-// Fonts
-$font-text-name: 'Lato';
-$font-text-path-name: $font-text-name;
-$font-title-name: 'Comfortaa';
-$font-title-path-name: $font-title-name;
-
 // Colors
 $color-primary: #008fff;
 $color-bg: #000000;
@@ -12,6 +6,25 @@ $color-title: #e2f1f8;
 $color-text: #cfd8dc;
 $color-text--dark: #9ea7aa;
 $color-gradient: linear-gradient(to right, #c33764, #1d2671);
+
+// Bulma breadcrumbs
+$breadcrumb-item-color: $color-primary;
+$breadcrumb-item-hover-color: $color-bg;
+$breadcrumb-item-active-color: $color-text;
+$breadcrumb-item-padding-horizontal: rem(10);
+$breadcrumb-item-separator-color: $color-text;
+
+// Bulma section
+$section-padding: rem(30) 0;
+$section-padding-desktop: rem(30) 0;
+$section-padding-medium: rem(40) 0;
+$section-padding-large: rem(50) 0;
+
+// Fonts
+$font-text-name: 'Lato';
+$font-text-path-name: $font-text-name;
+$font-title-name: 'Comfortaa';
+$font-title-path-name: $font-title-name;
 
 // Misc
 $container-width: 890px;

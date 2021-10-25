@@ -1,5 +1,5 @@
-import 'normalize.css/normalize.css';
-import 'styles/global.scss';
+import 'styles/global/index.scss';
+import 'styles/index.scss';
 import { SidebarVisibilityProvider } from 'contexts/SidebarVisibility';
 
 const App = ({ Component, pageProps }) => (

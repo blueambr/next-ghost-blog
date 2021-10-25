@@ -95,7 +95,7 @@ const Header = ({ data, about }) => {
 
   return (
     <header
-      className={`${styles.header} ${isSidebarHidden ? styles.header_hidden : ''}`}
+      className={`section ${styles.header} ${isSidebarHidden ? styles.header_hidden : ''}`}
       ref={headerRef}
     >
       <div className="container">

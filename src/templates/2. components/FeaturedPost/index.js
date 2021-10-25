@@ -26,10 +26,7 @@ const FeaturedPost = ({ data }) => {
             <li className={styles.tag} key={tag.id}>
               <Link href={`/tag/${tag.slug}`}>
                 {tag.accent_color ? (
-                  <a
-                    className={styles.tag__link}
-                    style={{ backgroundColor: tag.accent_color }}
-                  >
+                  <a className={styles.tag__link} style={{ backgroundColor: tag.accent_color }}>
                     {tag.name}
                   </a>
                 ) : (
