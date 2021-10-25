@@ -13,6 +13,7 @@ const FeaturedPage = ({ settings, about, posts }) => {
     <Layout data={settings} meta={meta} about={about}>
       <Crumbs />
       <Posts posts={posts} />
+      <Crumbs />
     </Layout>
   );
 };

@@ -15,6 +15,7 @@ const RecentPage = ({ settings, about, posts, pagination }) => {
     <Layout data={settings} meta={meta} about={about}>
       <Crumbs />
       <Posts posts={posts} pagination={pagination} paginationRoot="recent" />
+      <Crumbs />
     </Layout>
   );
 };

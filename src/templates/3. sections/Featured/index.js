@@ -6,7 +6,7 @@ const Featured = ({ posts }) => {
   const pageLink = { href: '/featured', text: 'Featured' };
 
   return (
-    <section className={styles.featured}>
+    <section className={`section ${styles.featured}`}>
       <div className="container">
         <div className={styles.wrapper}>
           <div className={styles['page-link']}>

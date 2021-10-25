@@ -13,6 +13,7 @@ const TagPage = ({ settings, about, posts, pagination, slug, name }) => {
     <Layout data={settings} meta={meta} about={about}>
       <Crumbs />
       <Posts posts={posts} pagination={pagination} paginationRoot={`tag/${slug}`} />
+      <Crumbs />
     </Layout>
   );
 };

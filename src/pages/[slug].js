@@ -20,6 +20,7 @@ const PostPage = ({ settings, about, post }) => {
     <Layout data={settings} meta={meta} about={about}>
       <Crumbs />
       <DedicatedPost data={post} />
+      <Crumbs />
     </Layout>
   );
 };

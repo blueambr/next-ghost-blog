@@ -1,12 +1,7 @@
 @import 'src/styles/includes';
 
 .post {
-  padding: rem(10) 0 rem(30);
   background-color: $color-bg;
-
-  @include laptop {
-    padding: rem(40) 0;
-  }
 }
 
 .head {
