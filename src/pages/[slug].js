@@ -1,5 +1,6 @@
 import { getSettings, getAboutPage, getSinglePost } from 'lib/content';
 import Layout from '@/layout';
+import Crumbs from '@/sections/Crumbs';
 import DedicatedPost from '@/sections/DedicatedPost';
 
 const PostPage = ({ settings, about, post }) => {
@@ -17,6 +18,7 @@ const PostPage = ({ settings, about, post }) => {
 
   return (
     <Layout data={settings} meta={meta} about={about}>
+      <Crumbs />
       <DedicatedPost data={post} />
     </Layout>
   );
@@ -28,9 +30,16 @@ export const getServerSideProps = async (context) => {
   const { params } = context;
   const { slug } = params;
 
+  const post = await getSinglePost(slug);
+
+  if (!post) {
+    return {
+      notFound: true,
+    };
+  }
+
   const settings = await getSettings();
   const aboutPage = await getAboutPage();
-  const post = await getSinglePost(slug);
 
   const about = aboutPage.html;
 

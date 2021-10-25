@@ -1,12 +1,5 @@
 @use "sass:math";
 
-// Retina
-@mixin retina {
-  @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
-    @content;
-  }
-}
-
 // Breakpoints, Mobile-first
 @mixin mobile {
   @media screen and (max-width: 768px) {
@@ -44,7 +37,38 @@
   }
 }
 
-// Actions
+// Fonts
+@mixin font($style: te-400) {
+  @if $style == ti-400 {
+    font-family: '#{$font-title-name} Regular', sans-serif;
+  }
+
+  @if $style == ti-500 {
+    font-family: '#{$font-title-name} Medium', sans-serif;
+  }
+
+  @if $style == ti-700 {
+    font-family: '#{$font-title-name} Bold', sans-serif;
+  }
+
+  @if $style == te-400 {
+    font-family: '#{$font-text-name} Regular', sans-serif;
+  }
+
+  @if $style == te-400-it {
+    font-family: '#{$font-text-name} Italic', sans-serif;
+  }
+
+  @if $style == te-700 {
+    font-family: '#{$font-text-name} Bold', sans-serif;
+  }
+
+  @if $style == te-700-it {
+    font-family: '#{$font-text-name} Bold Italic', sans-serif;
+  }
+}
+
+// Helpers
 @mixin center($axis: xy) {
   position: absolute;
 
@@ -83,37 +107,9 @@
   transition: all $dur + s;
 }
 
-// Fonts
-@function rem($val) {
-  @return math.div($val, 16) + 0rem;
-}
-
-@mixin font($style: te-400) {
-  @if $style == ti-400 {
-    font-family: '#{$font-title-name} Regular', sans-serif;
-  }
-
-  @if $style == ti-500 {
-    font-family: '#{$font-title-name} Medium', sans-serif;
-  }
-
-  @if $style == ti-700 {
-    font-family: '#{$font-title-name} Bold', sans-serif;
-  }
-
-  @if $style == te-400 {
-    font-family: '#{$font-text-name} Regular', sans-serif;
-  }
-
-  @if $style == te-400-it {
-    font-family: '#{$font-text-name} Italic', sans-serif;
-  }
-
-  @if $style == te-700 {
-    font-family: '#{$font-text-name} Bold', sans-serif;
-  }
-
-  @if $style == te-700-it {
-    font-family: '#{$font-text-name} Bold Italic', sans-serif;
+// Retina
+@mixin retina {
+  @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
+    @content;
   }
 }

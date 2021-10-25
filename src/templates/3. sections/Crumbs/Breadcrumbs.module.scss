@@ -1,0 +1,16 @@
+@import 'src/styles/includes';
+
+.item {
+  a {
+    @include trans;
+    display: block;
+
+    @include hf {
+      background-color: $color-primary;
+    }
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}

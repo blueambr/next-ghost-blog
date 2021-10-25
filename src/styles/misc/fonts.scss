@@ -1,7 +1,7 @@
 // Title
 @font-face {
   font-family: '#{$font-title-name} Regular';
-  src: url('../../fonts/#{$font-title-path-name}-Regular.woff2') format('woff2');
+  src: url('/assets/fonts/#{$font-title-path-name}-Regular.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: '#{$font-title-name} Medium';
-  src: url('../../fonts/#{$font-title-path-name}-Medium.woff2') format('woff2');
+  src: url('/assets/fonts/#{$font-title-path-name}-Medium.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: '#{$font-title-name} Bold';
-  src: url('../../fonts/#{$font-title-path-name}-Bold.woff2') format('woff2');
+  src: url('/assets/fonts/#{$font-title-path-name}-Bold.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -26,7 +26,7 @@
 // Text
 @font-face {
   font-family: '#{$font-text-name} Regular';
-  src: url('../../fonts/#{$font-text-path-name}-Regular.woff2') format('woff2');
+  src: url('/assets/fonts/#{$font-text-path-name}-Regular.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -34,7 +34,7 @@
 
 @font-face {
   font-family: '#{$font-text-name} Italic';
-  src: url('../../fonts/#{$font-text-path-name}-Italic.woff2') format('woff2');
+  src: url('/assets/fonts/#{$font-text-path-name}-Italic.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -42,7 +42,7 @@
 
 @font-face {
   font-family: '#{$font-text-name} Bold';
-  src: url('../../fonts/#{$font-text-path-name}-Bold.woff2') format('woff2');
+  src: url('/assets/fonts/#{$font-text-path-name}-Bold.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -50,8 +50,7 @@
 
 @font-face {
   font-family: '#{$font-text-name} Bold Italic';
-  src: url('../../fonts/#{$font-text-path-name}-BoldItalic.woff2')
-    format('woff2');
+  src: url('/assets/fonts/#{$font-text-path-name}-BoldItalic.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;

@@ -1,5 +1,6 @@
 import { getSettings, getAboutPage, getAllPostsPage } from 'lib/content';
 import Layout from '@/layout';
+import Crumbs from '@/sections/Crumbs';
 import Posts from '@/sections/Posts';
 
 const RecentPage = ({ settings, about, posts, pagination }) => {
@@ -12,6 +13,7 @@ const RecentPage = ({ settings, about, posts, pagination }) => {
 
   return (
     <Layout data={settings} meta={meta} about={about}>
+      <Crumbs />
       <Posts posts={posts} pagination={pagination} paginationRoot="recent" />
     </Layout>
   );
@@ -26,6 +28,12 @@ export const getServerSideProps = async (context) => {
   const settings = await getSettings();
   const aboutPage = await getAboutPage();
   const posts = await getAllPostsPage(page ? page[0] : 1);
+
+  if (!posts.length) {
+    return {
+      notFound: true,
+    };
+  }
 
   const { meta } = posts;
   const about = aboutPage.html;
