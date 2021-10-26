@@ -1,5 +1,6 @@
 import { getSettings, getAboutPage, readTag, getTagPage } from 'lib/content';
 import Layout from '@/layout';
+import BackToTop from '@/sections/BackToTop';
 import Crumbs from '@/sections/Crumbs';
 import Posts from '@/sections/Posts';
 
@@ -13,7 +14,7 @@ const TagPage = ({ settings, about, posts, pagination, slug, name }) => {
     <Layout data={settings} meta={meta} about={about}>
       <Crumbs />
       <Posts posts={posts} pagination={pagination} paginationRoot={`tag/${slug}`} />
-      <Crumbs />
+      <BackToTop />
     </Layout>
   );
 };

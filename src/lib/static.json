@@ -1,4 +1,7 @@
 {
+  "backToTop": {
+    "text": "Back to the top"
+  },
   "breadcrumbs": {
     "home": "Home"
   }

@@ -1,5 +1,6 @@
 import { getSettings, getAboutPage, getAllPostsPage, getFeaturedPosts } from 'lib/content';
 import Layout from '@/layout';
+import BackToTop from '@/sections/BackToTop';
 import Featured from '@/sections/Featured';
 import Posts from '@/sections/Posts';
 
@@ -18,6 +19,7 @@ const Home = ({ settings, about, posts, featuredPosts, pagination }) => {
         pagination={pagination}
         paginationRoot="recent"
       />
+      <BackToTop />
     </Layout>
   );
 };

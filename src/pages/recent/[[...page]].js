@@ -1,5 +1,6 @@
 import { getSettings, getAboutPage, getAllPostsPage } from 'lib/content';
 import Layout from '@/layout';
+import BackToTop from '@/sections/BackToTop';
 import Crumbs from '@/sections/Crumbs';
 import Posts from '@/sections/Posts';
 
@@ -15,7 +16,7 @@ const RecentPage = ({ settings, about, posts, pagination }) => {
     <Layout data={settings} meta={meta} about={about}>
       <Crumbs />
       <Posts posts={posts} pagination={pagination} paginationRoot="recent" />
-      <Crumbs />
+      <BackToTop />
     </Layout>
   );
 };

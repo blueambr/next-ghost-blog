@@ -1,5 +1,6 @@
 import { getSettings, getAboutPage, getSinglePost } from 'lib/content';
 import Layout from '@/layout';
+import BackToTop from '@/sections/BackToTop';
 import Crumbs from '@/sections/Crumbs';
 import DedicatedPost from '@/sections/DedicatedPost';
 
@@ -20,7 +21,7 @@ const PostPage = ({ settings, about, post }) => {
     <Layout data={settings} meta={meta} about={about}>
       <Crumbs />
       <DedicatedPost data={post} />
-      <Crumbs />
+      <BackToTop />
     </Layout>
   );
 };

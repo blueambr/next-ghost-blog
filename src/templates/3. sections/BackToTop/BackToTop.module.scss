@@ -1,0 +1,52 @@
+@import 'src/styles/includes';
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @include hf {
+    .icon,
+    .title {
+      color: $color-primary;
+    }
+  }
+
+  &::after {
+    @include center;
+    display: block;
+    width: 100%;
+    height: calc(100% + rem(30));
+    content: '';
+  }
+}
+
+.icon {
+  @include trans;
+  width: rem(25);
+  color: $color-title;
+
+  @include tablet {
+    width: rem(30);
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.title {
+  @include font(te-400);
+  @include trans;
+  margin-left: rem(15);
+  font-size: rem(16);
+  color: $color-title;
+
+  @include laptop {
+    font-size: rem(20);
+  }
+}

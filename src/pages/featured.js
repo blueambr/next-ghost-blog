@@ -1,5 +1,6 @@
 import { getSettings, getAboutPage, getFeaturedPosts } from 'lib/content';
 import Layout from '@/layout';
+import BackToTop from '@/sections/BackToTop';
 import Crumbs from '@/sections/Crumbs';
 import Posts from '@/sections/Posts';
 
@@ -13,7 +14,7 @@ const FeaturedPage = ({ settings, about, posts }) => {
     <Layout data={settings} meta={meta} about={about}>
       <Crumbs />
       <Posts posts={posts} />
-      <Crumbs />
+      <BackToTop />
     </Layout>
   );
 };
