@@ -5,7 +5,7 @@ $color-bg--light: #2c2c2c;
 $color-title: #e2f1f8;
 $color-text: #cfd8dc;
 $color-text--dark: #9ea7aa;
-$color-gradient: linear-gradient(to right, #c33764, #1d2671);
+$color-gradient: radial-gradient(circle, rgba(255, 128, 0, 1) 0%, rgba(255, 2, 152, 1) 100%);
 
 // Bulma breadcrumbs
 $breadcrumb-item-color: $color-primary;
