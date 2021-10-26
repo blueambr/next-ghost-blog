@@ -7,7 +7,7 @@ const FeaturedPost = ({ data }) => {
 
   return (
     <article className={styles.article}>
-      <div className={styles.cover}>
+      <div className={`block-sm ${styles.cover}`}>
         <Link href={`/${slug}`}>
           <a className={styles.pic} aria-label="Go to the post">
             <Image
@@ -37,7 +37,7 @@ const FeaturedPost = ({ data }) => {
           ))}
         </ul>
       </div>
-      <h2 className={styles.title}>
+      <h2 className={`block ${styles.title}`}>
         <Link href={`/${slug}`}>
           <a className={styles.title__link}>
             <span>{title}</span>

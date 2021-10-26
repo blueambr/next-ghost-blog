@@ -10,7 +10,7 @@ const Post = ({ data }) => {
     <article className={styles.article}>
       <div className={styles.wrapper}>
         {feature_image && (
-          <div className={styles.cover}>
+          <div className={`block-sm block-mobile ${styles.cover}`}>
             <Link href={`/${slug}`}>
               <a className={styles.pic} aria-label="Go to the post">
                 <Image
@@ -27,16 +27,18 @@ const Post = ({ data }) => {
           </div>
         )}
         <div className={styles.content}>
-          <h2 className={styles.title}>
+          <h2 className={`block-xs ${styles.title}`}>
             <Link href={`/${slug}`}>
               <a className={styles.title__link}>
                 <span>{title}</span>
               </a>
             </Link>
           </h2>
-          <div className={styles.additional}>
-            <Tags tags={tags} />
-            <div className={styles.excerpt}>
+          <div className={`block-xs ${styles.additional}`}>
+            <div className={`block-xs ${styles.tags}`}>
+              <Tags tags={tags} />
+            </div>
+            <div className={`block-xs ${styles.excerpt}`}>
               <p>{excerpt}</p>
             </div>
           </div>

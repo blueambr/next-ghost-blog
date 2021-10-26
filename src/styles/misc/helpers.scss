@@ -3,9 +3,45 @@
     margin-bottom: rem(24);
   }
 
+  &-xl {
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+    }
+  }
+
+  &-lg {
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &-md {
+    &:not(:last-child) {
+      margin-bottom: rem(32);
+    }
+  }
+
   &-sm {
     &:not(:last-child) {
       margin-bottom: rem(16);
+    }
+  }
+
+  &-xs {
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+  }
+
+  &-xxs {
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+
+  &-mobile {
+    @include tablet {
+      margin-bottom: 0;
     }
   }
 }

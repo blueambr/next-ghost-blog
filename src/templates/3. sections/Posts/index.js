@@ -8,21 +8,21 @@ const Posts = ({ pageLink, posts, pagination, paginationRoot }) => (
     <div className="container">
       <div className={styles.wrapper}>
         {pageLink && (
-          <div className={styles['page-link']}>
+          <div className={`block ${styles['page-link']}`}>
             <PageLink data={pageLink} />
           </div>
         )}
-        <div className={styles.content}>
+        <div className={`block ${styles.content}`}>
           <ul className={styles.row}>
             {posts.map((post) => (
-              <li className={styles.col} key={post.id}>
+              <li className={`block-md ${styles.col}`} key={post.id}>
                 <Post data={post} />
               </li>
             ))}
           </ul>
         </div>
         {pagination && (
-          <div className={styles.pagination}>
+          <div className={`block ${styles.pagination}`}>
             <Pagination data={pagination} root={paginationRoot} />
           </div>
         )}

@@ -9,10 +9,10 @@ const Featured = ({ posts }) => {
     <section className={`section ${styles.featured}`}>
       <div className="container">
         <div className={styles.wrapper}>
-          <div className={styles['page-link']}>
+          <div className={`block ${styles['page-link']}`}>
             <PageLink data={pageLink} />
           </div>
-          <div className={styles.content}>
+          <div className={`block ${styles.content}`}>
             <ul className={styles.row}>
               {posts.map((post) => (
                 <li className={styles.col} key={post.id}>

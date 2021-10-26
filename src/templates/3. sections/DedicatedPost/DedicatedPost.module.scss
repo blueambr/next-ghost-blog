@@ -4,10 +4,6 @@
   background-color: $color-bg;
 }
 
-.head {
-  margin-bottom: rem(50);
-}
-
 .title {
   @include font(ti-700);
   font-size: rem(36);
@@ -15,14 +11,6 @@
 
   @include laptop {
     font-size: rem(52);
-  }
-}
-
-.additional {
-  margin-top: rem(15);
-
-  @include laptop {
-    margin-top: rem(5);
   }
 }
 
@@ -39,7 +27,6 @@
 .info {
   display: flex;
   align-items: center;
-  margin-top: rem(35);
 
   &__author {
     @include font(ti-500);
@@ -79,7 +66,6 @@
   position: relative;
   width: 100%;
   height: rem(300);
-  margin-bottom: rem(50);
 
   @include laptop {
     height: rem(500);

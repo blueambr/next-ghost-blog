@@ -95,7 +95,7 @@ const Header = ({ data, about }) => {
 
   return (
     <header
-      className={`${styles.header} ${isSidebarHidden ? styles.header_hidden : ''}`}
+      className={`section ${styles.header} ${isSidebarHidden ? styles.header_hidden : ''}`}
       ref={headerRef}
     >
       <div className="container">
@@ -106,7 +106,7 @@ const Header = ({ data, about }) => {
             title={trigger.titleHide}
             onClick={() => setIsSidebarHidden(true)}
           />
-          <div className={`section ${styles.content}`}>
+          <div className={`block ${styles.content}`}>
             <div className={`block-sm ${styles.logo}`}>
               <Logo data={title} />
             </div>
@@ -117,7 +117,7 @@ const Header = ({ data, about }) => {
               <RichText data={about} isSmall />
             </div>
           </div>
-          <div className={`section ${styles.footer}`}>
+          <div className={`block ${styles.footer}`}>
             <div className={`block-sm ${styles.socials}`}>
               <Socials list={socials} />
             </div>

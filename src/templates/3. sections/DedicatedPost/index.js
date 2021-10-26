@@ -10,17 +10,19 @@ const DedicatedPost = ({ data }) => {
 
   return (
     <section className={`section ${styles.post}`}>
-      <div className={styles.head}>
+      <div className={`block-xl ${styles.head}`}>
         <div className="container">
           <div className={styles.head__wrapper}>
-            <h1 className={styles.title}>{title}</h1>
-            <div className={styles.additional}>
-              <Tags tags={tags} />
-              <div className={styles.excerpt}>
+            <h1 className={`block-xxs ${styles.title}`}>{title}</h1>
+            <div className={`block ${styles.additional}`}>
+              <div className={`block-sm ${styles.tags}`}>
+                <Tags tags={tags} />
+              </div>
+              <div className={`block-sm ${styles.excerpt}`}>
                 <p>{excerpt}</p>
               </div>
             </div>
-            <div className={styles.info}>
+            <div className={`block ${styles.info}`}>
               <div className={styles['info__author-avatar']}>
                 <Image
                   className={styles['info__author-img']}
@@ -52,7 +54,7 @@ const DedicatedPost = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className={styles.cover}>
+      <div className={`block-xl ${styles.cover}`}>
         <Image
           className={styles.cover__img}
           src={feature_image}
@@ -63,7 +65,7 @@ const DedicatedPost = ({ data }) => {
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         />
       </div>
-      <div className={styles['rich-text']}>
+      <div className={`block-xl ${styles['rich-text']}`}>
         <div className="container">
           <RichText data={html} />
         </div>

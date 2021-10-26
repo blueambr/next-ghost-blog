@@ -12,7 +12,6 @@
 
   @include mobile {
     max-width: rem(400);
-    margin-bottom: rem(20);
   }
 
   @include tablet {
@@ -79,10 +78,6 @@
       color: $color-title;
     }
   }
-}
-
-.additional {
-  margin-top: rem(10);
 }
 
 .excerpt {
