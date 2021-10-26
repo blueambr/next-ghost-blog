@@ -1,5 +1,15 @@
 @import 'src/styles/includes';
 
+.item {
+  &:first-child {
+    padding-right: $breadcrumb-item-padding-horizontal;
+
+    a.link {
+      padding-right: 0;
+    }
+  }
+}
+
 a.link {
   @include trans;
   display: block;

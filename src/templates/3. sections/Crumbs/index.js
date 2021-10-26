@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import staticData from 'lib/static.json';
-import styles from './Breadcrumbs.module.scss';
+import styles from './Crumbs.module.scss';
 
 const Breadcrumbs = ({
   rootLabel,
