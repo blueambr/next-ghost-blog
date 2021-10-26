@@ -95,7 +95,7 @@ const Header = ({ data, about }) => {
 
   return (
     <header
-      className={`section ${styles.header} ${isSidebarHidden ? styles.header_hidden : ''}`}
+      className={`${styles.header} ${isSidebarHidden ? styles.header_hidden : ''}`}
       ref={headerRef}
     >
       <div className="container">
@@ -106,22 +106,22 @@ const Header = ({ data, about }) => {
             title={trigger.titleHide}
             onClick={() => setIsSidebarHidden(true)}
           />
-          <div className={styles.content}>
-            <div className={styles.logo}>
+          <div className={`section ${styles.content}`}>
+            <div className={`block-sm ${styles.logo}`}>
               <Logo data={title} />
             </div>
-            <div className={styles.nav}>
+            <div className={`block ${styles.nav}`}>
               <Nav data={navigation} />
             </div>
-            <div className={styles.about}>
+            <div className={`block ${styles.about}`}>
               <RichText data={about} isSmall />
             </div>
           </div>
-          <div className={styles.footer}>
-            <div className={styles.socials}>
+          <div className={`section ${styles.footer}`}>
+            <div className={`block-sm ${styles.socials}`}>
               <Socials list={socials} />
             </div>
-            <div className={styles.powered}>
+            <div className={`block-sm ${styles.powered}`}>
               <a
                 className={styles.powered__link}
                 href="https://www.digitalocean.com/?refcode=a1995348068b&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
@@ -140,7 +140,7 @@ const Header = ({ data, about }) => {
                 />
               </a>
             </div>
-            <div className={styles.triggers}>
+            <div className={`block ${styles.triggers}`}>
               <Trigger
                 icon={faEyeSlash}
                 isSidebarHidden={isSidebarHidden}

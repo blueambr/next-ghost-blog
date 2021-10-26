@@ -5,13 +5,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 0 rem(-10);
+  margin: 0 rem(-10) rem(-10);
 }
 
 .link {
   @include font(ti-400);
   display: block;
-  padding: rem(10);
+  padding: 0 rem(10) rem(10);
   font-size: rem(20);
 
   @include laptop {
