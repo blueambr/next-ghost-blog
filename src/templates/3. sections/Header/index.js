@@ -131,7 +131,7 @@ const Header = ({ data, about }) => {
               >
                 <Image
                   className={styles.powered__img}
-                  src="/do.svg"
+                  src="/assets/images/do.svg"
                   alt="DigitalOcean Referral Badge"
                   width={125}
                   height={40}
