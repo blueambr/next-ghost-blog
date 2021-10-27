@@ -10,4 +10,4 @@
 
 Copyright © 2021
 
-Licensed under the MIT license.
+Licensed under the ISC license.

@@ -178,20 +178,12 @@
 
           @include container {
             width: calc(100vw + #{rem(10)});
-            margin: 0
-              calc(
-                (100vw - (#{$container-width} - (#{$container-padding} * 2)) + #{rem(10)}) / 2 * -1
-              )
-              rem(-25);
+            margin: 0 calc((100vw - (#{$container-width} - (#{$container-padding} * 2)) + #{rem(10)}) / 2 * -1) rem(-25);
           }
 
           @include laptop {
             width: calc(100vw + #{rem(15)});
-            margin: 0
-              calc(
-                (100vw - (#{$container-width} - (#{$container-padding} * 2)) + #{rem(15)}) / 2 * -1
-              )
-              rem(-30);
+            margin: 0 calc((100vw - (#{$container-width} - (#{$container-padding} * 2)) + #{rem(15)}) / 2 * -1) rem(-30);
           }
         }
 
@@ -201,7 +193,7 @@
           padding: 0 rem(5) rem(10);
 
           @include tablet {
-            width: 33.33333%;
+            width: 33.3333%;
           }
 
           @include laptop {
@@ -230,11 +222,8 @@
           &-wide {
             img {
               @include container {
-                width: calc(
-                  100vw - ((100vw - (#{$container-width} - (#{$container-padding} * 2))) / 2)
-                );
-                margin: 0
-                  calc((100vw - (#{$container-width} - (#{$container-padding} * 2))) / 4 * -1);
+                width: calc(100vw - ((100vw - (#{$container-width} - (#{$container-padding} * 2))) / 2));
+                margin: 0 calc((100vw - (#{$container-width} - (#{$container-padding} * 2))) / 4 * -1);
               }
             }
           }
@@ -243,8 +232,7 @@
             img {
               @include container {
                 width: 100vw;
-                margin: 0
-                  calc((100vw - (#{$container-width} - (#{$container-padding} * 2))) / 2 * -1);
+                margin: 0 calc((100vw - (#{$container-width} - (#{$container-padding} * 2))) / 2 * -1);
               }
             }
           }

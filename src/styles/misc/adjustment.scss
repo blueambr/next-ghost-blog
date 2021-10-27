@@ -10,7 +10,7 @@
 html {
   // Stick the footer with a dynamic height to the bottom of a page
   min-height: 100%;
-  //-
+  // -
   font-size: 16px;
 }
 
@@ -87,12 +87,12 @@ button {
 }
 
 input[type='number'] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
