@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import c from 'clsx';
 import styles from './FeaturedPost.module.scss';
 
 const FeaturedPost = ({ data }) => {
@@ -7,7 +8,7 @@ const FeaturedPost = ({ data }) => {
 
   return (
     <article className={styles.article}>
-      <div className={`block-sm ${styles.cover}`}>
+      <div className={c('block-sm', styles.cover)}>
         <Link href={`/${slug}`}>
           <a className={styles.pic} aria-label="Go to the post">
             <Image
@@ -37,7 +38,7 @@ const FeaturedPost = ({ data }) => {
           ))}
         </ul>
       </div>
-      <h2 className={`block ${styles.title}`}>
+      <h2 className={c('block', styles.title)}>
         <Link href={`/${slug}`}>
           <a className={styles.title__link}>
             <span>{title}</span>

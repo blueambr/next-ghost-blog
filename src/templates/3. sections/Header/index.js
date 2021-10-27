@@ -1,8 +1,9 @@
 import { useContext, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import SidebarVisibilityContext from 'contexts/SidebarVisibility';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import SidebarVisibilityContext from 'contexts/SidebarVisibility';
+import c from 'clsx';
 import Logo from '@/elements/Logo';
 import Nav from '@/components/Nav';
 import RichText from '@/components/RichText';
@@ -14,14 +15,13 @@ const Trigger = ({ classname, icon, title }) => {
 
   return (
     <div
-      className={`${styles.trigger} ${classname || ''} ${
-        isSidebarHidden ? styles['trigger_hidden-sidebar'] : ''
-      }`}
+      className={c(styles.trigger, classname, isSidebarHidden && styles['trigger_hidden-sidebar'])}
     >
       <button
-        className={`${styles.trigger__button} ${
-          classname === styles.trigger_show ? styles.trigger__button_show : ''
-        }`}
+        className={c(
+          styles.trigger__button,
+          classname === styles.trigger_show && styles.trigger__button_show
+        )}
         type="button"
         title={title}
         onClick={() => setIsSidebarHidden(!isSidebarHidden)}
@@ -95,33 +95,33 @@ const Header = ({ data, about }) => {
 
   return (
     <header
-      className={`section ${styles.header} ${isSidebarHidden ? styles.header_hidden : ''}`}
+      className={c('section', styles.header, isSidebarHidden && styles.header_hidden)}
       ref={headerRef}
     >
       <div className="container">
         <div className={styles.wrapper}>
           <button
-            className={`${styles.dimmer} ${isSidebarHidden ? styles.dimmer_hidden : ''}`}
+            className={c(styles.dimmer, isSidebarHidden && styles.dimmer_hidden)}
             type="button"
             title={trigger.titleHide}
             onClick={() => setIsSidebarHidden(true)}
           />
-          <div className={`block ${styles.content}`}>
-            <div className={`block-sm ${styles.logo}`}>
+          <div className={c('block', styles.content)}>
+            <div className={c('block-sm', styles.logo)}>
               <Logo data={title} />
             </div>
-            <div className={`block ${styles.nav}`}>
+            <div className={c('block', styles.nav)}>
               <Nav data={navigation} />
             </div>
-            <div className={`block ${styles.about}`}>
+            <div className={c('block', styles.about)}>
               <RichText data={about} isSmall />
             </div>
           </div>
-          <div className={`block ${styles.footer}`}>
-            <div className={`block-sm ${styles.socials}`}>
+          <div className={c('block', styles.footer)}>
+            <div className={c('block-sm', styles.socials)}>
               <Socials list={socials} />
             </div>
-            <div className={`block-sm ${styles.powered}`}>
+            <div className={c('block-sm', styles.powered)}>
               <a
                 className={styles.powered__link}
                 href="https://www.digitalocean.com/?refcode=a1995348068b&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
@@ -140,7 +140,7 @@ const Header = ({ data, about }) => {
                 />
               </a>
             </div>
-            <div className={`block ${styles.triggers}`}>
+            <div className={c('block', styles.triggers)}>
               <Trigger
                 icon={faEyeSlash}
                 isSidebarHidden={isSidebarHidden}

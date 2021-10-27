@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import c from 'clsx';
 import staticData from 'lib/static.json';
 import styles from './Crumbs.module.scss';
 
@@ -116,16 +117,15 @@ const Crumbs = () => {
   const { home } = breadcrumbs;
 
   return (
-    <section className={`${styles.breadcrumbs} section`}>
+    <section className={c('section', styles.breadcrumbs)}>
       <div className="container">
         <div className={styles.wrapper}>
           <Breadcrumbs
             rootLabel={home}
-            containerClassName={`breadcrumb ${styles.nav} has-arrow-separator is-medium`}
-            listClassName={`${styles.list}`}
-            activeItemClassName={`${styles.item} is-active`}
-            inactiveItemClassName={`${styles.item}`}
-            linkClassName={`${styles.link}`}
+            containerClassName={c('breadcrumb', styles.nav, 'has-arrow-separator', 'is-medium')}
+            activeItemClassName={c(styles.item, 'is-active')}
+            inactiveItemClassName={c(styles.item)}
+            linkClassName={c(styles.link)}
             omitHrefs={['/tag']}
             replaceCharacterList={[
               { from: '.', to: ' ' },

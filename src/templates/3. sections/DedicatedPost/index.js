@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { format } from 'date-fns';
+import c from 'clsx';
 import Tags from '@/elements/Tags';
 import RichText from '@/components/RichText';
 import styles from './DedicatedPost.module.scss';
@@ -9,20 +10,20 @@ const DedicatedPost = ({ data }) => {
     data;
 
   return (
-    <section className={`section ${styles.post}`}>
-      <div className={`block-xl ${styles.head}`}>
+    <section className={c('section', styles.post)}>
+      <div className={c('block-xl', styles.head)}>
         <div className="container">
           <div className={styles.head__wrapper}>
-            <h1 className={`block-xxs ${styles.title}`}>{title}</h1>
-            <div className={`block ${styles.additional}`}>
-              <div className={`block-sm ${styles.tags}`}>
+            <h1 className={c('block-xxs', styles.title)}>{title}</h1>
+            <div className={c('block', styles.additional)}>
+              <div className={c('block-sm', styles.tags)}>
                 <Tags tags={tags} />
               </div>
-              <div className={`block-sm ${styles.excerpt}`}>
+              <div className={c('block-sm', styles.excerpt)}>
                 <p>{excerpt}</p>
               </div>
             </div>
-            <div className={`block ${styles.info}`}>
+            <div className={c('block', styles.info)}>
               <div className={styles['info__author-avatar']}>
                 <Image
                   className={styles['info__author-img']}
@@ -54,7 +55,7 @@ const DedicatedPost = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className={`block-xl ${styles.cover}`}>
+      <div className={c('block-xl', styles.cover)}>
         <Image
           className={styles.cover__img}
           src={feature_image}
@@ -65,7 +66,7 @@ const DedicatedPost = ({ data }) => {
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         />
       </div>
-      <div className={`block-xl ${styles['rich-text']}`}>
+      <div className={c('block-xl', styles['rich-text'])}>
         <div className="container">
           <RichText data={html} />
         </div>

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import c from 'clsx';
 import Tags from '@/elements/Tags';
 import styles from './Post.module.scss';
 
@@ -10,7 +11,7 @@ const Post = ({ data }) => {
     <article className={styles.article}>
       <div className={styles.wrapper}>
         {feature_image && (
-          <div className={`block-sm block-mobile ${styles.cover}`}>
+          <div className={c('block-sm', 'block-mobile', styles.cover)}>
             <Link href={`/${slug}`}>
               <a className={styles.pic} aria-label="Go to the post">
                 <Image
@@ -27,18 +28,18 @@ const Post = ({ data }) => {
           </div>
         )}
         <div className={styles.content}>
-          <h2 className={`block-xs ${styles.title}`}>
+          <h2 className={c('block-xs', styles.title)}>
             <Link href={`/${slug}`}>
               <a className={styles.title__link}>
                 <span>{title}</span>
               </a>
             </Link>
           </h2>
-          <div className={`block-xs ${styles.additional}`}>
-            <div className={`block-xs ${styles.tags}`}>
+          <div className={c('block-xs', styles.additional)}>
+            <div className={c('block-xs', styles.tags)}>
               <Tags tags={tags} />
             </div>
-            <div className={`block-xs ${styles.excerpt}`}>
+            <div className={c('block-xs', styles.excerpt)}>
               <p>{excerpt}</p>
             </div>
           </div>

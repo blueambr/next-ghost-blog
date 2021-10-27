@@ -6,6 +6,7 @@ import {
   faStepBackward,
   faStepForward,
 } from '@fortawesome/free-solid-svg-icons';
+import c from 'clsx';
 import styles from './Pagination.module.scss';
 
 const Pagination = ({ data, root }) => {
@@ -24,16 +25,12 @@ const Pagination = ({ data, root }) => {
       <li className={styles.item} key={pagesPage}>
         {pagesPage !== page && !isNaN(pagesPage) ? (
           <Link href={`/${root}/${pagesPage}`}>
-            <a className={`${styles.link} ${styles.clickable}`}>
+            <a className={c(styles.link, styles.clickable)}>
               <div className={styles.text}>{pagesPage}</div>
             </a>
           </Link>
         ) : (
-          <div
-            className={`${styles.link} ${
-              !isNaN(pagesPage) ? styles.active : ''
-            }`}
-          >
+          <div className={c(styles.link, !isNaN(pagesPage) && styles.active)}>
             <div className={styles.text}>{pagesPage}</div>
           </div>
         )}
@@ -84,17 +81,14 @@ const Pagination = ({ data, root }) => {
         <li className={styles.item}>
           {page !== pagesArray[0] ? (
             <Link href={`/${root}/${pagesArray[0]}`}>
-              <a
-                className={`${styles.link} ${styles.clickable}`}
-                title="Go to the first page"
-              >
+              <a className={c(styles.link, styles.clickable)} title="Go to the first page">
                 <div className={styles.icon}>
                   <FontAwesomeIcon icon={faFastBackward} />
                 </div>
               </a>
             </Link>
           ) : (
-            <div className={`${styles.link} ${styles.disabled}`}>
+            <div className={c(styles.link, styles.disabled)}>
               <div className={styles.icon}>
                 <FontAwesomeIcon icon={faFastBackward} />
               </div>
@@ -104,18 +98,15 @@ const Pagination = ({ data, root }) => {
         <li className={styles.item}>
           {prev ? (
             <Link href={`/${root}/${prev}`}>
-              <a
-                className={`${styles.link} ${styles.clickable}`}
-                title="Go to the previous page"
-              >
-                <div className={`${styles.icon} ${styles.small}`}>
+              <a className={c(styles.link, styles.clickable)} title="Go to the previous page">
+                <div className={c(styles.icon, styles.small)}>
                   <FontAwesomeIcon icon={faStepBackward} />
                 </div>
               </a>
             </Link>
           ) : (
-            <div className={`${styles.link} ${styles.disabled}`}>
-              <div className={`${styles.icon} ${styles.small}`}>
+            <div className={c(styles.link, styles.disabled)}>
+              <div className={c(styles.icon, styles.small)}>
                 <FontAwesomeIcon icon={faStepBackward} />
               </div>
             </div>
@@ -125,18 +116,15 @@ const Pagination = ({ data, root }) => {
         <li className={styles.item}>
           {next ? (
             <Link href={`/${root}/${next}`}>
-              <a
-                className={`${styles.link} ${styles.clickable}`}
-                title="Go to the next page"
-              >
-                <div className={`${styles.icon} ${styles.small}`}>
+              <a className={c(styles.link, styles.clickable)} title="Go to the next page">
+                <div className={c(styles.icon, styles.small)}>
                   <FontAwesomeIcon icon={faStepForward} />
                 </div>
               </a>
             </Link>
           ) : (
-            <div className={`${styles.link} ${styles.disabled}`}>
-              <div className={`${styles.icon} ${styles.small}`}>
+            <div className={c(styles.link, styles.disabled)}>
+              <div className={c(styles.icon, styles.small)}>
                 <FontAwesomeIcon icon={faStepForward} />
               </div>
             </div>
@@ -145,17 +133,14 @@ const Pagination = ({ data, root }) => {
         <li className={styles.item}>
           {page !== pagesArrayLength ? (
             <Link href={`/${root}/${pagesArrayLength}`}>
-              <a
-                className={`${styles.link} ${styles.clickable}`}
-                title="Go to the last page"
-              >
+              <a className={c(styles.link, styles.clickable)} title="Go to the last page">
                 <div className={styles.icon}>
                   <FontAwesomeIcon icon={faFastForward} />
                 </div>
               </a>
             </Link>
           ) : (
-            <div className={`${styles.link} ${styles.disabled}`}>
+            <div className={c(styles.link, styles.disabled)}>
               <div className={styles.icon}>
                 <FontAwesomeIcon icon={faFastForward} />
               </div>

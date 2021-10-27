@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
+import c from 'clsx';
 import staticData from 'lib/static.json';
 import styles from './BackToTop.module.scss';
 
@@ -8,7 +9,7 @@ const BackToTop = () => {
   const { text } = backToTop;
 
   return (
-    <section className={`section ${styles['back-to-top']}`}>
+    <section className={c('section', styles['back-to-top'])}>
       <div className="container">
         <div className={styles.wrapper}>
           <button
